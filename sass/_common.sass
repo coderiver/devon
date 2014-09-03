@@ -47,26 +47,314 @@
 // p
 // 	+jpg(bla)
 
+$red: #e31e24
+
+=f
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	font-weight: 300
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
-	line-height: 1.4
+	min-width: 1760px
+	+f
+	font-size: 20px 
+	line-height: 1.2
+	color: #333
+button, input, textarea
+	+f
+a
+	text-decoration: none
+
+// common blocks
+.wrapper
+	min-height: 100%
+	margin-bottom: -300px
+
+.push
+	height: 300px
+
+.l-center
+	max-width: 1700px
+	margin: 0 auto
+	padding: 0 30px
+	&.l-center_small
+		max-width: 1360px
+    
+.main
+	margin-bottom: 85px
+	padding-bottom: 4px
+	border-bottom: 2px solid #1d1e1d 
+	.main__bg
+		background: url(../img/bg-main.jpg) 50% 50%
+		background-size: cover  
+	.main__center
+		height: 100vh
+		min-height: 100%
+		max-width: 1520px
+		margin: 0 auto
+		padding: 0 30px
+	.main__header
+		min-height: 175px
+		padding-top: 60px
+		margin-bottom: 100px
+		+clr
+	.main__in
+		+clr
+	.main__logo
+		float: left
+		+s(logo)
+	.main__serv
+		float: right
+	.main__serv-item
+		float: left
+		margin-left: 15px
+		background: #fff
+		text-align: center
+		&:first-child
+			margin: 0
+	.main__serv-pic
+		position: relative
+		img
+			display: block
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background: rgba(0,0,0,.15)
+	.main__serv-title
+		padding: 24px 0 38px
+		font-size: 20px
+		text-transform: uppercase
+		color: #333
+
+.phone
+	float: left
+	font-size: 0
+	.phone__in,	
+	.phone__ico
+		display: inline-block
+		vertical-align: middle	
+	.phone__in	
+		margin-right: 25px
+		font-size: 22px
+		color: #C5C5C5 
+	.phone__ico
+		+s(marker)
+
+.nav
+	float: right
+	margin-top: 8px
+	ul
+		float: left
+		padding: 0 15px
+		border-left: 1px solid #5F5F5F 
+		&:first-child
+			border: none
+	li
+		line-height: 1.1
+		&:first-child
+			margin-bottom: 5px
+			a
+				text-transform: uppercase
+				font-size: 20px
+	a
+		color: #c5c5c5
+		font-size: 16px
+
+.slider
+	margin-bottom: 180px
+	.slider__nav
+		margin-bottom: 50px
+		text-align: center
+	.slider__nav-in
+		display: inline-block
+		padding: 0 15px 7px
+		border-bottom: 1px solid #a0a0a0 
+		a
+			position: relative
+			display: inline-block
+			margin: 0 15px
+			font-size: 18px
+			color: #9E9E9E 
+			&:first-child
+				margin: 0
+			&.is-active
+				color: #404040
+				cursor: default 
+				&:after
+					content: ""
+					position: absolute
+					bottom: -10px
+					left: 50%
+					height: 3px
+					width: 68px
+					margin-left: -34px
+					background: $red 
+	.slider__center
+		position: relative
+		max-width: 1210px
+		margin: 0 auto
+	.slider__in
+		margin-bottom: 15px
+		padding-bottom: 60px
+		border-bottom: 2px solid #a0a0a0
+	.slider__about
+		font-size: 30px
+		text-align: center
+	.slider__list
+		position: relative
+	.slider__prev, .slider__next
+		position: absolute
+		top: 50%
+		margin-top: -78px
+	.slider__prev
+		left: -170px
+		+s(prev)
+	.slider__next
+		right: -170px
+		+s(next)
+	.slider__item
+		width: 100%
+	.slider__item-in
+		position: relative
+		width: 100%
+		height: 600px
+	.slider__pic
+		position: absolute
+		width: 270px
+		height: 270px
+		border-radius: 50%
+		border: 2px solid $red 
+		+vertical
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 184px
+			height: 184px
+			margin: -97px 0 0 -97px
+			border-radius: 50% 
+			border: 5px solid #404040
+			z-index: 2
+		img
+			position: relative
+			vertical-align: middle
+			z-index: 4 
+	.slider__pic_big
+		width: 530px
+		height: 530px
+		&:after
+			width: 360px
+			height: 360px
+			margin: -185px 0 0 -185px
+	.slider__text
+		position: absolute
+		font-size: 30px
+		span
+			display: inline-block
+			font-size: 120px 
+			vertical-align: top
+			line-height: 0.8
+
+.partners
+	margin-bottom: 180px
+	.partners__title
+		position: relative
+		padding-bottom: 15px
+		margin-bottom: 70px
+		text-align: center
+		font-size: 36px
+		line-height: 1
+		text-transform: uppercase
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 50%
+			width: 115px
+			height: 3px
+			margin-left: -57px
+			background: $red 
+	.partners__list
+		font-size: 0
+		border: 1px solid #a0a0a0
+		li
+			display: inline-block
+			width: 16.6% 
+			height: 194px
+			padding: 10px 
+			border-left: 1px solid #a0a0a0 
+			box-sizing: border-box
+			vertical-align: top
+			+vertical
+			&:first-child
+				width: 17%
+				border: none
+			img
+				max-width: 100%
+				max-height: 100%
+				vertical-align: middle
+
+.footer
+	height: 300px
+	background: #101010 
+	.footer__in
+		min-height: 185px
+		padding-top: 65px
+		+clr
+	.footer__left
+		float: left
+	.footer__phone, .footer__mail
+		color: #C5C5C5
+	.footer__phone
+		margin-bottom: 5px
+	.footer__mail
+		margin-bottom: 20px
+		a
+			color: #C5C5C5 
+	.footer__down
+		height: 49px
+		border-top: 1px solid #3f3f3f 
+		+clr
+	.footer__copyright
+		float: left
+		margin-top: 14px
+		font-size: 18px
+		color: #B1B1B1 
+	.footer__created
+		float: right
+		margin-top: 9px
+		font-size: 0
+		span, a
+			display: inline-block
+			vertical-align: middle
+		span
+			margin-right: 15px
+			font-size: 18px
+			color: #B1B1B1 
+		a
+			+s(mediahero)
+	.nav
+		margin: 0
 
 
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
+.social
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 5px
+		vertical-align: top
+		&:first-child
+			margin: 0
+	.social__fb
+		+s(fb)
+	.social__gp
+		+s(gp)
+	.social__tw
+		+s(tw)
 
 
 
