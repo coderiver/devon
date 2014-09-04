@@ -54,7 +54,6 @@ $red: #e31e24
 	font-weight: 300
 
 body
-	min-width: 1760px
 	+f
 	font-size: 20px 
 	line-height: 1.2
@@ -76,13 +75,28 @@ a
 	max-width: 1700px
 	margin: 0 auto
 	padding: 0 30px
+	+r(1760)
+		max-width: 900px
 	&.l-center_small
 		max-width: 1360px
-    
+  
+.header
+	background: #101010   
+	.header__in
+		+clr
+	.header__logo
+		float: left
+	.phone
+		margin: 100px 0 0 75px 
+	.nav
+		margin-top: 25px
+
 .main
 	margin-bottom: 85px
 	padding-bottom: 4px
 	border-bottom: 2px solid #1d1e1d 
+	+r(1760)
+		margin-bottom: 45px
 	.main__bg
 		background: url(../img/bg-main.jpg) 50% 50%
 		background-size: cover  
@@ -92,6 +106,8 @@ a
 		max-width: 1520px
 		margin: 0 auto
 		padding: 0 30px
+		+r(1760)
+			max-width: 900px
 	.main__header
 		min-height: 175px
 		padding-top: 60px
@@ -101,7 +117,6 @@ a
 		+clr
 	.main__logo
 		float: left
-		+s(logo)
 	.main__serv
 		float: right
 	.main__serv-item
@@ -109,8 +124,9 @@ a
 		margin-left: 15px
 		background: #fff
 		text-align: center
-		&:first-child
-			margin: 0
+		+r(1760)
+			width: 230px
+			margin-left: 8px 
 	.main__serv-pic
 		position: relative
 		img
@@ -128,6 +144,9 @@ a
 		font-size: 20px
 		text-transform: uppercase
 		color: #333
+		+r(1760)
+			padding: 16px 0 17px
+			font-size: 16px
 
 .phone
 	float: left
@@ -140,6 +159,8 @@ a
 		margin-right: 25px
 		font-size: 22px
 		color: #C5C5C5 
+		+r(1760)
+			font-size: 20px
 	.phone__ico
 		+s(marker)
 
@@ -147,9 +168,10 @@ a
 	float: right
 	margin-top: 8px
 	ul
-		float: left
+		display: table-cell
 		padding: 0 15px
-		border-left: 1px solid #5F5F5F 
+		border-left: 1px solid #5F5F5F
+		vertical-align: top 
 		&:first-child
 			border: none
 	li
@@ -159,14 +181,18 @@ a
 			a
 				text-transform: uppercase
 				font-size: 20px
+				+r(1760)
+					font-size: 18px
 	a
 		color: #c5c5c5
 		font-size: 16px
 
 .slider
 	margin-bottom: 180px
+	+r(1760)
+		margin-bottom: 70px
 	.slider__nav
-		margin-bottom: 50px
+		margin-bottom: 45px
 		text-align: center
 	.slider__nav-in
 		display: inline-block
@@ -178,6 +204,8 @@ a
 			margin: 0 15px
 			font-size: 18px
 			color: #9E9E9E 
+			+r(1760)
+				font-size: 16px
 			&:first-child
 				margin: 0
 			&.is-active
@@ -196,6 +224,8 @@ a
 		position: relative
 		max-width: 1210px
 		margin: 0 auto
+		+r(1760)
+			max-width: 850px
 	.slider__in
 		margin-bottom: 15px
 		padding-bottom: 60px
@@ -203,31 +233,44 @@ a
 	.slider__about
 		font-size: 30px
 		text-align: center
+		+r(1760)
+			font-size: 24px
 	.slider__list
 		position: relative
 	.slider__prev, .slider__next
 		position: absolute
 		top: 50%
 		margin-top: -78px
+		background: none
+		font-size: 0 
 	.slider__prev
 		left: -170px
-		+s(prev)
+		+r(1760)
+			left: -30px
 	.slider__next
 		right: -170px
-		+s(next)
+		+r(1760)
+			right: -30px
 	.slider__item
 		width: 100%
 	.slider__item-in
 		position: relative
 		width: 100%
 		height: 600px
+		+r(1760)
+			height: 430px
 	.slider__pic
 		position: absolute
+	.slider__pic-in
 		width: 270px
 		height: 270px
 		border-radius: 50%
+		background: #FFF 
 		border: 2px solid $red 
 		+vertical
+		+r(1760)
+			width: 172px
+			height: 172px
 		&:after
 			content: ""
 			position: absolute
@@ -239,25 +282,41 @@ a
 			border-radius: 50% 
 			border: 5px solid #404040
 			z-index: 2
+			+r(1760)
+				width: 116px
+				height: 116px
+				margin: -63px 0 0 -63px
 		img
 			position: relative
 			vertical-align: middle
 			z-index: 4 
 	.slider__pic_big
-		width: 530px
-		height: 530px
-		&:after
-			width: 360px
-			height: 360px
-			margin: -185px 0 0 -185px
+		.slider__pic-in
+			width: 530px
+			height: 530px
+			+r(1760)
+				width: 334px
+				height: 334px
+			&:after
+				width: 360px
+				height: 360px
+				margin: -185px 0 0 -185px
+				+r(1760)
+					width: 224px
+					height: 224px
+					margin: -117px 0 0 -117px 
 	.slider__text
 		position: absolute
 		font-size: 30px
+		+r(1760)	
+			font-size: 18px
 		span
 			display: inline-block
 			font-size: 120px 
 			vertical-align: top
 			line-height: 0.8
+			+r(1760)	
+				font-size: 74px
 
 .partners
 	margin-bottom: 180px
@@ -269,6 +328,10 @@ a
 		font-size: 36px
 		line-height: 1
 		text-transform: uppercase
+		+r(1760)
+			margin-bottom: 40px
+			padding-bottom: 10px
+			font-size: 26px
 		&:after
 			content: ""
 			position: absolute
@@ -290,6 +353,8 @@ a
 			box-sizing: border-box
 			vertical-align: top
 			+vertical
+			+r(1760)
+				height: 104px
 			&:first-child
 				width: 17%
 				border: none
