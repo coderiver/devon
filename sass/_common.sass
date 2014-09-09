@@ -67,9 +67,13 @@ a
 .wrapper
 	min-height: 100%
 	margin-bottom: -300px
+	+r(960)
+		margin-bottom: -250px
 
 .push
 	height: 300px
+	+r(960)
+		height: 250px
 
 .l-center
 	max-width: 1700px
@@ -77,6 +81,9 @@ a
 	padding: 0 30px
 	+r(1760)
 		max-width: 900px
+	+r(960)
+		max-width: 290px
+		padding: 0 15px
 	&.l-center_small
 		max-width: 1360px
   
@@ -90,6 +97,16 @@ a
 		margin: 100px 0 0 75px 
 	.nav
 		margin-top: 25px
+
+.nav-btn
+	display: none
+	position: absolute
+	top: 18px
+	right: 15px
+	+s(menu-ico)
+	z-index: 4 
+	+r(960)
+		display: block
 
 .main
 	margin-bottom: 85px
@@ -108,25 +125,42 @@ a
 		padding: 0 30px
 		+r(1760)
 			max-width: 900px
+		+r(960)
+			max-width: 290px
+			height: 825px
+			padding: 0 15px
 	.main__header
+		position: relative
 		min-height: 175px
 		padding-top: 60px
 		margin-bottom: 100px
 		+clr
+		+r(960)
+			min-height: 13px
+			padding: 0 
+			margin: 0
 	.main__in
 		+clr
 	.main__logo
 		float: left
+		font-size: 0
+		+r(960)
+			margin-bottom: 20px
 	.main__serv
 		float: right
+		+r(960)
+			text-align: center
 	.main__serv-item
-		float: left
+		display: inline-block
 		margin-left: 15px
 		background: #fff
 		text-align: center
+		vertical-align: top
 		+r(1760)
 			width: 230px
 			margin-left: 8px 
+		+r(960)
+			margin: 0 0 8px
 	.main__serv-pic
 		position: relative
 		img
@@ -151,6 +185,8 @@ a
 .phone
 	float: left
 	font-size: 0
+	+r(960)
+		display: none
 	.phone__in,	
 	.phone__ico
 		display: inline-block
@@ -167,47 +203,87 @@ a
 .nav
 	float: right
 	margin-top: 8px
-	ul
+	&.nav_main
+		+r(960)
+			display: none
+			position: absolute
+			top: 0
+			right: -15px
+			width: 210px
+			margin: 0
+			padding: 20px 15px 50px 20px
+			background: #101010 
+			z-index: 2  
+		.nav__list
+			+r(960)
+				display: block
+				padding: 0
+				margin-bottom: 10px
+				border: none
+				li
+					margin-left: 25px
+					padding: 5px 0 5px 10px
+					border-left: 1px solid $red
+					a
+						font-size: 18px
+					&:first-child
+						margin: 0 0 10px
+						padding: 0
+						border: none
+						a
+							text-transform: none
+							font-size: 22px
+	.nav__list
 		display: table-cell
 		padding: 0 15px
 		border-left: 1px solid #5F5F5F
 		vertical-align: top 
 		&:first-child
 			border: none
-	li
-		line-height: 1.1
-		&:first-child
-			margin-bottom: 5px
-			a
-				text-transform: uppercase
-				font-size: 20px
-				+r(1760)
-					font-size: 18px
-	a
-		color: #c5c5c5
-		font-size: 16px
+		li
+			line-height: 1.1
+			&:first-child
+				margin-bottom: 5px
+				a
+					text-transform: uppercase
+					font-size: 20px
+					+r(1760)
+						font-size: 18px
+		a
+			color: #c5c5c5
+			font-size: 16px
 
 .slider
 	margin-bottom: 180px
 	+r(1760)
 		margin-bottom: 70px
+	+r(960)
+		margin-bottom: 45px
 	.slider__nav
 		margin-bottom: 45px
 		text-align: center
+		+r(960)
+			margin-bottom: 20px
 	.slider__nav-in
 		display: inline-block
 		padding: 0 15px 7px
 		border-bottom: 1px solid #a0a0a0 
+		font-size: 0
+		+r(960)
+			padding: 0 0 8px
 		a
 			position: relative
 			display: inline-block
-			margin: 0 15px
 			font-size: 18px
 			color: #9E9E9E 
 			+r(1760)
 				font-size: 16px
+			+r(960)
+				font-size: 14px
 			&:first-child
-				margin: 0
+				margin-right: 30px
+				+r(960)
+					margin-right: 5px
 			&.is-active
 				color: #404040
 				cursor: default 
@@ -230,11 +306,16 @@ a
 		margin-bottom: 15px
 		padding-bottom: 60px
 		border-bottom: 2px solid #a0a0a0
+		+r(960)	
+			padding-bottom: 40px
+			margin-bottom: 10px 
 	.slider__about
 		font-size: 30px
 		text-align: center
 		+r(1760)
 			font-size: 24px
+		+r(960)
+			font-size: 16px
 	.slider__list
 		position: relative
 	.slider__prev, .slider__next
@@ -243,6 +324,8 @@ a
 		margin-top: -78px
 		background: none
 		font-size: 0 
+		+r(960)
+			display: none
 	.slider__prev
 		left: -170px
 		+r(1760)
@@ -259,6 +342,8 @@ a
 		height: 600px
 		+r(1760)
 			height: 430px
+		+r(960)
+			height: 400px
 	.slider__pic
 		position: absolute
 	.slider__pic-in
@@ -271,6 +356,9 @@ a
 		+r(1760)
 			width: 172px
 			height: 172px
+		+r(960)
+			width: 130px
+			height: 130px
 		&:after
 			content: ""
 			position: absolute
@@ -286,6 +374,10 @@ a
 				width: 116px
 				height: 116px
 				margin: -63px 0 0 -63px
+			+r(960)
+				width: 88px
+				height: 88px
+				margin: -49px 0 0 -49px
 		img
 			position: relative
 			vertical-align: middle
@@ -297,6 +389,9 @@ a
 			+r(1760)
 				width: 334px
 				height: 334px
+			+r(960)
+				width: 250px
+				height: 250px
 			&:after
 				width: 360px
 				height: 360px
@@ -305,11 +400,17 @@ a
 					width: 224px
 					height: 224px
 					margin: -117px 0 0 -117px 
+				+r(960)
+					width: 170px
+					height: 170px
+					margin: -90px 0 0 -90px
 	.slider__text
 		position: absolute
 		font-size: 30px
 		+r(1760)	
 			font-size: 18px
+		+r(960)
+			font-size: 10px
 		span
 			display: inline-block
 			font-size: 120px 
@@ -317,9 +418,80 @@ a
 			line-height: 0.8
 			+r(1760)	
 				font-size: 74px
+			+r(960)
+				font-size: 48px
+	.slider__text_1
+		top: 80px
+		left: 10px
+		width: 540px
+		+r(1760)
+			left: 50px
+			width: 340px
+		+r(960)
+			top: 0
+			left: 0
+			width: 230px
+	.slider__text_2
+		bottom: 0
+		left: 350px
+		+r(1760)
+			left: 270px
+		+r(960)
+			left: 140px
+	.slider__text_3
+		top: 100px
+		right: 10px
+		width: 560px
+		+r(1760)
+			width: 450px
+		+r(960)
+			top: 0
+			right: 0
+			width: 200px
+	.slider__text_4
+		bottom: 0
+		right: 280px
+		width: 420px
+		+r(1760)
+			right: 180px
+		+r(960)
+			right: 140px
+			width: 150px
+	.slider__pic_1
+		top: 0
+		right: 0
+		+r(1760)
+			right: 50px
+		+r(960)
+			top: 65px
+			right: 0
+	.slider__pic_2
+		bottom: 0
+		left: 0
+		+r(1760)
+			left: 50px
+		+r(960)
+			left: 0
+	.slider__pic_3
+		top: 0
+		left: 0
+		+r(1760)
+			left: 50px
+		+r(960)
+			top: 55px
+			left: 0
+	.slider__pic_4
+		bottom: 0
+		right: 0
+		+r(1760)
+			right: 50px
+		+r(960)
+			right: 0
 
 .partners
 	margin-bottom: 180px
+	+r(960)
+		margin-bottom: 45px
 	.partners__title
 		position: relative
 		padding-bottom: 15px
@@ -332,6 +504,8 @@ a
 			margin-bottom: 40px
 			padding-bottom: 10px
 			font-size: 26px
+		+r(960)
+			font-size: 22px
 		&:after
 			content: ""
 			position: absolute
@@ -344,6 +518,8 @@ a
 	.partners__list
 		font-size: 0
 		border: 1px solid #a0a0a0
+		+r(960)
+			border-width: 1px 0 0 1px
 		li
 			display: inline-block
 			width: 16.6% 
@@ -355,21 +531,36 @@ a
 			+vertical
 			+r(1760)
 				height: 104px
+			+r(960)
+				width: 50%
+				height: 100px
+				border: 1px solid #a0a0a0 
+				border-width: 0 1px 1px 0
 			&:first-child
 				width: 17%
 				border: none
+				+r(960)
+					width: 50%
+					border: 1px solid #a0a0a0 
+					border-width: 0 1px 1px 0
 			img
 				max-width: 100%
 				max-height: 100%
 				vertical-align: middle
 
 .footer
+	position: relative
 	height: 300px
 	background: #101010 
+	+r(960)
+		height: 250px
 	.footer__in
 		min-height: 185px
 		padding-top: 65px
 		+clr
+		+r(960)
+			min-height: 174px
+			padding-top: 25px
 	.footer__left
 		float: left
 	.footer__phone, .footer__mail
@@ -383,12 +574,17 @@ a
 	.footer__down
 		height: 49px
 		border-top: 1px solid #3f3f3f 
-		+clr
+		.l-center
+			position: relative
+			+clr
 	.footer__copyright
 		float: left
 		margin-top: 14px
 		font-size: 18px
 		color: #B1B1B1 
+		span
+			+r(960)
+				display: none
 	.footer__created
 		float: right
 		margin-top: 9px
@@ -400,10 +596,18 @@ a
 			margin-right: 15px
 			font-size: 18px
 			color: #B1B1B1 
+			+r(960)
+				font-size: 12px 
 		a
 			+s(mediahero)
+		+r(960)
+			position: absolute
+			bottom: 50px
+			left: 15px
 	.nav
 		margin: 0
+		+r(960)
+			display: none
 
 
 .social

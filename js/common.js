@@ -1,8 +1,10 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	// mob menu
+	var menu_btn = $('.nav-btn'),
+			menu = $('.nav_main');
+	menu_btn.on('click', function () {
+		menu.fadeToggle();
+	});
 
-	console.log($('body').html());
 });
