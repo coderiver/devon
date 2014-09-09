@@ -1,0 +1,662 @@
+// inner pages
+.breadcrumbs
+	margin-bottom: 100px
+	font-size: 0
+	+r(980)
+		margin-bottom: 25px
+	li
+		position: relative
+		display: inline
+		padding-left: 20px
+		font-size: 16px
+		color: #262626 
+		+r(980)
+			font-size: 14px
+		&:before
+			content: ""
+			position: absolute
+			top: 6px
+			left: 8px
+			+s(bc-arr)
+		&:first-child
+			padding: 0
+			&:before
+				display: none
+	a
+		color: #262626
+		text-decoration: underline
+		 
+.title
+	max-width: 1020px
+	margin: 0 auto 45px
+	text-align: center
+	+r(980)
+		margin: 0 auto 15px
+	.title__in
+		position: relative
+		padding-bottom: 15px
+		border-bottom: 1px solid #A0A0A0 
+		text-align: center
+		font-size: 30px
+		line-height: 1.1
+		+r(980)
+			padding-bottom: 10px
+			font-size: 18px
+		&:after
+			content: ""
+			position: absolute
+			bottom: -2px
+			left: 50%
+			width: 290px
+			height: 3px
+			margin-left: -145px
+			background: $red 
+			+r(980)
+				width: 160px
+				margin-left: -80px
+			
+.dev
+	position: relative
+	.dev__list
+		margin-bottom: 150px 
+		overflow: hidden
+		+r(1760)
+			margin-bottom: 65px
+		+r(980)
+			margin-bottom: 15px
+	.dev__list-in
+		margin-right: -20px
+		overflow: hidden
+		+r(980)
+			margin: 0
+			border: 1px solid #a0a0a0
+			border-width: 1px 0 0 1px
+		.dev__item
+			float: left
+			width: 444px 
+			height: 228px
+			margin: 0 10px 10px 0
+			border: 1px solid #a0a0a0
+			+r(1760)
+				margin: 0 5px 5px 0
+			+r(980)	
+				width: 143px
+				height: auto
+				margin: 0
+				border-width: 0 1px 1px 0
+				&:nth-child(2n)
+					width: 144px
+		.dev__pic
+			float: left
+			font-size: 0
+			+r(980)
+				display: none
+		.dev__type
+			position: relative
+			padding: 70px 25px 0
+			font-size: 18px
+			color: #262626 
+			overflow: hidden
+			+r(980)
+				display: table-cell
+				width: 143px
+				height: 90px
+				padding: 0 7px
+				vertical-align: middle
+				font-size: 12px
+			&:before
+				content: ""
+				position: absolute
+				top: 40px
+				left: 25px
+				width: 70px
+				height: 2px
+				background: $red
+				+r(980)
+					display: none 
+	.dev__info
+		margin-bottom: 70px
+		.dev__item
+			margin-bottom: 85px 
+			+r(1760)
+				margin-bottom: 40px
+			+r(980)
+				margin-bottom: 20px
+		.dev__pic, .dev__in
+			display: table-cell
+			vertical-align: top
+			+r(980)
+				display: block
+		.dev__pic
+			width: 446px
+			padding-right: 60px
+			font-size: 0
+			+r(1760)
+				width: 355px
+				padding-right: 45px
+			+r(980)
+				float: left
+				width: 115px
+				padding: 0
+				margin: 0 10px 10px -15px 
+		.dev__in
+			padding-bottom: 40px
+			border-bottom: 1px solid #a0a0a0 
+			+r(980)
+				padding: 0
+				border: none
+		.dev__title
+			position: relative
+			padding-top: 75px
+			margin-bottom: 30px 
+			font-size: 24px 
+			+r(1760)
+				padding-top: 60px
+			+r(980)
+				min-height: 95px
+				padding-top: 20px
+				margin-bottom: 10px
+				font-size: 16px
+			&:before
+				content: ""
+				position: absolute
+				top: 27px
+				left: 0
+				width: 70px
+				height: 2px
+				background: $red 
+				+r(980)
+					top: 0
+					left: 110px
+					right: 0
+					width: auto
+		.dev__content
+			font-size: 18px
+			line-height: 1.3
+			+r(980)
+				font-size: 16px
+			p, ul
+				margin-bottom: 10px 
+			ul
+				li
+					position: relative
+					padding-left: 30px
+					&:before
+						content: ""
+						position: absolute
+						top: 6px
+						left: 0
+						+s(content-ok)
+
+.team
+	margin-bottom: 150px
+	+r(1760)
+		margin-bottom: 100px
+	+r(980)
+		margin-bottom: 50px
+	.team__title
+		position: relative
+		margin-bottom: 30px 
+		font-size: 30px
+		text-align: center
+		+r(980)
+			padding-bottom: 10px
+			border-bottom: 1px solid #A0A0A0 
+			font-size: 22px
+			&:after
+				content: ""
+				position: absolute
+				bottom: -2px
+				left: 50%
+				width: 290px
+				height: 3px
+				margin-left: -145px
+				background: $red 
+				+r(980)
+					width: 160px
+					margin-left: -80px
+	.team__list
+		font-size: 0
+		overflow: hidden
+	.team__list-in
+		margin-right: -20px
+		overflow: hidden
+	.team__item
+		float: left
+		width: 330px
+		margin: 0 15px 45px 0
+		+r(1760)
+			width: 217px
+			margin: 0 10px 35px 0
+		+r(980)
+			width: 100%
+			margin: 0 0 25px
+	.team__btn
+		position: absolute
+		top: 14px
+		right: 11px
+		+s(team-btn)
+		z-index: 4
+		&.is-active
+			+s(team-btn-a)
+	.team__info
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		padding-top: 10px
+		border-left: 70px solid $red 
+		background: rgb(0,0,0)
+		background: rgba(0,0,0,.75) 
+		+r(1760)
+			border-width: 42px
+		li
+			margin-left: -70px
+			+r(1760)
+				margin-left: -42px
+	.team__in
+		position: relative
+		margin-bottom: 20px
+		+r(980)
+			display: none
+	.team__pic
+		position: relative
+		width: 330px
+		height: 200px
+		overflow: hidden
+		+r(1760)
+			width: 217px
+			height: 180px
+	.team__pic-in
+		position: absolute
+		top: 0
+		left: 50%
+		bottom: 0
+		width: 400px
+		margin-left: -200px
+		text-align: center
+		img
+			max-width: 100%
+			max-height: 100%
+	.team__content,
+	.team__ico
+		display: table-cell
+		height: 60px
+		vertical-align: middle
+		+r(1760)
+			height: 50px
+	.team__content
+		padding-left: 15px
+		font-size: 16px
+		color: #FFF 
+		+r(1760)
+			font-size: 14px
+		a
+			color: #FFF 
+	.team__ico
+		width: 70px
+		text-align: center
+		+r(1760)
+			width: 42px
+		i
+			display: inline-block
+			vertical-align: middle
+	.team__ico-phone
+		+s(team-phone)
+	.team__ico-mail
+		+s(team-mail)
+	.team__ico-map
+		+s(team-marker)
+	.team__name
+		font-size: 20px
+		+r(980)
+			font-size: 18px
+	.team__position
+		font-size: 16px
+		+r(980)
+			font-size: 14px
+	.team__contacts
+		display: none
+		margin-top: 10px
+		padding: 10px 0
+		background: #e6e5e5 
+		+r(980)
+			display: block
+		.team__content,
+		.team__ico
+			height: 40px
+		.team__ico
+			width: 60px
+		.team__content
+			color: #262626
+			a
+				color: #262626 
+		.team__ico-phone
+			+s(team-phone-dark)
+		.team__ico-mail
+			+s(team-mail-dark)
+
+.dev-popup
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	border: 1px solid #a0a0a0
+	background: #FFF 
+	+transform(translateY(100px))
+	+transition(transform .3s, opacity .3s)
+	opacity: 0 
+	z-index: 999 
+	&.is-open
+		+transform(translateY(0px))
+		opacity: 1 
+	.dev-popup__close
+		position: absolute
+		top: 15px
+		right: 15px
+		+s(dev-close) 
+		z-index: 4 
+	.dev__info
+		margin: 0
+		.dev__item
+			margin: 0
+		.dev__in
+			padding: 0 60px 0 0
+			border: none
+		.dev__title
+			&:before
+				top: 45px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
