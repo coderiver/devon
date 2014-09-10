@@ -13,23 +13,21 @@ head.ready(function() {
 		$(this).next().fadeToggle();
 	});
 
-	// dev	
-	var dev = $('.js-dev'),
-			dev_item = dev.find('.dev__item'),
-			dev_popup = $('.dev-popup'),
-			dev_close = dev_popup.find('.dev-popup__close');
-	dev_item.on('click', function () {
-		dev_popup.show();
-		setTimeout(function () {
-			dev_popup.addClass('is-open');
-		}, 100);
+	// threed	
+	var threed = $('.js-threed'),
+			threed_link = threed.find('.dev__item'),
+			threed_el = threed.find('.dev__el'),
+			threed_close = threed.find('.dev__close');
+	threed_link.on('click', function () {
+		var index = $(this).index();
+		threed_el.hide();
+		threed_el.eq(index).show();
+		threed.addClass('is-open');
 		return false;
 	});
-	dev_close.on('click', function () {
-		dev_popup.removeClass('is-open');
-		setTimeout(function () {
-			dev_popup.hide();
-		}, 400);
+	threed_close.on('click', function () {
+		threed.removeClass('is-open');
+		return false;
 	});
 
 });

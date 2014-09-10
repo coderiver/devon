@@ -30,6 +30,8 @@
 	max-width: 1020px
 	margin: 0 auto 45px
 	text-align: center
+	&.title_full
+		max-width: 100%
 	+r(980)
 		margin: 0 auto 15px
 	.title__in
@@ -54,9 +56,38 @@
 			+r(980)
 				width: 160px
 				margin-left: -80px
+	.title__text
+		max-width: 1070px
+		margin: 0 auto
+		padding: 20px 0 0 0 
+		font-size: 20px
+		p
+			margin-bottom: 20px
 			
 .dev
 	position: relative
+	&.dev_detail
+		position: relative
+		border: 1px solid #a0a0a0
+		background: #FFF 
+		.dev__close
+			position: absolute
+			top: 15px
+			right: 15px
+			+s(dev-close) 
+			z-index: 4 
+		.dev__info
+			margin: 0
+			.dev__item
+				margin: 0
+			.dev__in
+				padding: 0 60px 0 0
+				border: none
+			.dev__title
+				&:before
+					top: 45px
+		.dev__el
+			display: none
 	.dev__list
 		margin-bottom: 150px 
 		overflow: hidden
@@ -338,41 +369,33 @@
 		.team__ico-mail
 			+s(team-mail-dark)
 
-.dev-popup
-	display: none
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	border: 1px solid #a0a0a0
-	background: #FFF 
-	+transform(translateY(100px))
-	+transition(transform .3s, opacity .3s)
-	opacity: 0 
-	z-index: 999 
+.threed
+	position: relative
+	width: 1360px
+	height: 500px
+	margin-bottom: 300px
+	+perspective(1000)
+	font-size: 14px
 	&.is-open
-		+transform(translateY(0px))
-		opacity: 1 
-	.dev-popup__close
+		.threed__in
+			+transform(translateZ(-680px) rotateY(-90deg))
+	.threed__in
 		position: absolute
-		top: 15px
-		right: 15px
-		+s(dev-close) 
-		z-index: 4 
-	.dev__info
-		margin: 0
-		.dev__item
-			margin: 0
-		.dev__in
-			padding: 0 60px 0 0
-			border: none
-		.dev__title
-			&:before
-				top: 45px
-
-
-
-
+		width: 1360px
+		height: 500px
+		+transform-style(preserve-3d)
+		+transform(translateZ(-680px))
+		+tr(transform 1s)
+	.threed__item
+		position: absolute
+		width: 1360px
+		height: 500px
+		background: #FFF 
+		+backface-visibility(hidden)
+	.threed__item_front
+		+transform(translateZ(680px))
+	.threed__item_right
+		+transform(rotateY(90deg) translateZ(680px))
 
 
 
