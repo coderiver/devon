@@ -30,4 +30,38 @@ head.ready(function() {
 		return false;
 	});
 
+	// logist
+	var logist = $('.js-logist'),
+			logist_pic = logist.find('.logist__pic'),
+			logist_category = logist.find('.logist__category'),
+			logist_title = logist.find('.logist__title'),
+			logist_text = logist.find('.logist__text');
+	logist_pic.on('click', function () {
+		$(this).addClass('is-moved');
+	});
+	logist_title.on('click', function () {
+		$(this).parent().next().removeClass('is-moved');
+	});
+	logist_category.on('click', function () {
+		if (!$(this).hasClass('is-active')) {
+			logist_category.removeClass('is-active');
+			logist_text.slideUp();
+			$(this).addClass('is-active');
+			$(this).next().slideDown();
+		};
+	});
+
+	// scroll
+	$('body').on('scroll touchmove mousewheel', function(e){
+		var sl = $('.js-sl'),
+				sl_top = sl.offset().top,
+				scroll_top = $(window).scrollTop();
+		if (sl_top <= scroll_top) {
+			e.preventDefault();
+			e.stopPropagation();
+			return false;
+		};
+	})
+	
+
 });
