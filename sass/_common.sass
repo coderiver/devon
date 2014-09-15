@@ -60,6 +60,10 @@ $red: #e31e24
 	+r(980)
 		@content
 
+=header_fixed
+	@media only screen and (min-width: "980px")
+		@content
+
 body
 	+f
 	font-size: 20px 
@@ -100,16 +104,79 @@ a
 			padding: 0 15px
   
 .header
+	position: relative
+	min-height: 55px
 	margin-bottom: 40px
-	background: #101010   
+	z-index: 99 
 	+m
 		margin-bottom: 20px
+	&.is-fixed
+		+header_fixed
+			.header__wrap
+				position: fixed
+				top: 0
+				left: 0 
+				width: 100%
+				height: 55px
+			.header__logo-big
+				display: none
+			.header__logo-sticker
+				display: block
+			.nav
+				margin: 0
+			.nav__list
+				height: 55px - 17px
+				margin: 0
+				padding-top: 17px
+				border: none
+				&:hover
+					.nav__list-in
+						display: block
+				&.is-active
+					.nav__list-title
+						&:before
+							top: -17px
+			.nav__list-in
+				display: none
+				position: absolute
+				top: 55px
+				left: 0
+				right: 0
+				padding: 10px 0
+				background: #FFF 
+				border-top: 1px solid #fff
+				border-bottom: 1px solid #101010 
+				box-shadow: 0 2px 0 #101010 inset
+				text-align: right
+				li
+					display: inline-block
+					margin-right: 15px
+				a
+					color: #333 
+			.nav__list-title
+				position: relative
+				text-transform: none
+				&.is-dropdown
+					padding-right: 15px
+					&:after
+						content: ""
+						position: absolute
+						top: 10px
+						right: 0
+						+s(nav-dropdown)
+			.phone
+				margin: 15px 0 0 55px
+	.header__wrap
+		background: #101010 
 	.header__in
-		position: relative
 		+clr
+		+m
+			position: relative
 	.header__logo
 		float: left
 		font-size: 0
+	.header__logo-sticker
+		+s(logo-sticker)
 	.phone
 		margin: 100px 0 0 75px 
 		+p
@@ -125,17 +192,18 @@ a
 			margin: 0
 	.nav__list
 		&.is-active
-			position: relative
-			&:before
-				content: ""
-				position: absolute
-				top: -25px
-				left: 0
-				right: 0
-				height: 6px 
-				background: $red 
-				+m
-					display: none
+			.nav__list-title
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					top: -25px
+					left: -15px
+					right: -15px
+					height: 6px 
+					background: $red 
+					+m
+						display: none
 		li
 			&.is-active
 				a
@@ -255,55 +323,51 @@ a
 .nav
 	float: right
 	margin-top: 8px
-	&.nav_main
-		+m
-			display: none
-			position: absolute
-			top: 0
-			right: -15px
-			width: 210px
-			margin: 0
-			padding: 20px 15px 50px 20px
-			background: #101010 
-			z-index: 2  
-		.nav__list
-			+m
-				display: block
-				padding: 0
-				margin-bottom: 10px
-				border: none
-				li
-					margin-left: 25px
-					padding: 5px 0 5px 10px
-					border-left: 1px solid $red
-					a
-						font-size: 18px
-					&:first-child
-						margin: 0 0 10px
-						padding: 0
-						border: none
-						a
-							text-transform: none
-							font-size: 22px
+	color: #c5c5c5
+	+header_fixed
+		display: block !important
+	+m
+		display: none
+		position: absolute
+		top: 0
+		right: -15px
+		width: 210px
+		margin: 0
+		padding: 20px 15px 50px 20px
+		background: #101010 
+		z-index: 2  
 	.nav__list
 		display: table-cell
 		padding: 0 15px
 		border-left: 1px solid #5F5F5F
 		vertical-align: top 
+		+m
+			display: block
+			padding: 0
+			margin-bottom: 10px
+			border: none
+			li
+				margin-left: 25px
+				padding: 5px 0 5px 10px
+				border-left: 1px solid $red
+				a
+					font-size: 18px
 		&:first-child
 			border: none
 		li
 			line-height: 1.1
-			&:first-child
-				margin-bottom: 5px
-				a
-					text-transform: uppercase
-					font-size: 20px
-					+p
-						font-size: 18px
 		a
 			color: #c5c5c5
 			font-size: 16px
+	.nav__list-in
+		.l-center
+			padding: 0
+	.nav__list-title
+		margin-bottom: 5px
+		text-transform: uppercase
+		font-size: 20px
+		+p
+			font-size: 18px
 
 .slider
 	margin-bottom: 180px

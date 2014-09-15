@@ -947,17 +947,91 @@
 				width: 160px
 				margin-left: -80px
 
+.inner
+	margin-bottom: 150px
+	+p
+		margin-bottom: 100px
+	+m
+		margin-bottom: 50px
+	.inner__title
+		margin-bottom: 30px 
+		font-size: 36px
+		text-transform: uppercase
+		line-height: 1.1
+		+p
+			font-size: 32px
+		+m
+			margin-bottom: 10px
+			font-size: 22px
 
+.about
+	+clr
+	.about__pic
+		float: left
+		margin-right: 60px
+		+p
+			margin: 0 30px 30px 0 
+		+m
+			float: none
+			margin: 0 0 10px
+	.about__in
+		display: table
+		+p
+			display: block
 
+.content
+	+m
+		font-size: 16px
+	>*
+		margin-bottom: 20px
+		+m
+			margin-bottom: 15px
+	a
+		color: #333
+		text-decoration: underline
+		&:hover
+			text-decoration: none 
+	blockquote
+		max-width: 60%
+		margin-left: 40px
+		padding-left: 20px
+		border-left: 5px solid $red
+		+p
+			max-width: 80%
+		+m
+			max-width: 100
+			padding-left: 10px
+			margin-left: 0 
+	ul
+		li
+			position: relative
+			padding-left: 25px
+			&:before
+				content: ""
+				position: absolute
+				top: 8px
+				left: 0
+				width: 8px
+				height: 8px
+				background: $red  
 
-
-
-
-
-
-
-
-
+.mission
+	display: table
+	+m
+		font-size: 16px
+	.mission__row
+		display: table-row
+		+m
+			display: block
+	.mission__cell
+		display: table-cell
+		padding: 0 50px 20px 0
+		+m
+			display: block
+		&:first-child
+			color: $red 
+		p
+			margin-bottom: 10px
 
 
 
