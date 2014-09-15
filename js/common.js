@@ -2,7 +2,7 @@ head.ready(function() {
 
 	// mob menu
 	var menu_btn = $('.nav-btn'),
-			menu = $('.nav');
+			menu = $('.js-nav');
 	menu_btn.on('click', function () {
 		menu.fadeToggle();
 	});

@@ -1013,36 +1013,227 @@
 				left: 0
 				width: 8px
 				height: 8px
-				background: $red  
+				background: $red 
+				+m
+					top: 5px 
 
 .mission
 	display: table
 	+m
+		display: block
 		font-size: 16px
 	.mission__row
 		display: table-row
-		+m
+		+p
 			display: block
 	.mission__cell
 		display: table-cell
 		padding: 0 50px 20px 0
-		+m
+		+p
 			display: block
 		&:first-child
 			color: $red 
 		p
 			margin-bottom: 10px
+	.mission__organize
+		height: 10px
+		margin-bottom: 30px
+		border-bottom: 2px solid $red
+		text-align: center
+		+m
+			height: auto
+			border: none
+		span
+			display: inline-block
+			padding: 0 15px
+			background: #FFF 
+			vertical-align: top
 
 
+.goal
+	margin-bottom: 35px
+	.goal__cell
+		display: table-cell
+		vertical-align: bottom
+		+m
+			display: block
+	.goal__title
+		margin-bottom: 25px
+		font-size: 18px
+		text-align: center
+		text-transform: uppercase
+	.goal__list
+		font-size: 0
+		+m
+			text-align: center
+		li
+			display: inline-block
+			+s(goal-item)
+			text-align: center
+			line-height: 57px
+			font-size: 18px 
+			vertical-align: top
+			+m
+				margin-bottom: 10px
+	.goal__pic
+		font-size: 0
+		text-align: center
 
+.quality
+	+clr
+	.quality__left
+		float: left
+		margin-right: 100px
+		font-size: 0
+		+p
+			float: none
+			margin: 0 0 50px
+			text-align: center
+		+m
+			display: none
+	>.quality__list,
+	.quality__center
+		vertical-align: middle
+		.quality__list
+			text-align: left
+	.quality__list
+		display: inline-block
+		font-size: 14px
+		color: #404040 
+		li
+			position: relative
+			padding-left: 8px
+			&:before
+				content: ""
+				position: absolute
+				top: 6px
+				left: 0
+				width: 3px
+				height: 3px
+				background: $red 
+	.quality__center
+		display: inline-block
+		margin: 0 15px
+		text-align: center
+	.quality__pic
+		margin: 15px 0
+	.quality__right
+		display: table
 
+.press
+	.press__item
+		margin-bottom: 70px
+		+clr
+		+p
+			margin-bottom: 50px
+	.press__pic
+		float: left
+		margin-right: 100px
+		font-size: 0
+		img
+			max-width: 100%
+		+p
+			margin-right: 50px
+		+m
+			margin: 0 0 10px
+	.press__info
+		display: table
+	.press__title
+		margin-bottom: 5px
+		font-size: 22px
+		text-transform: uppercase
+		color: $red 
+		+m
+			font-size: 16px
+		a
+			color: $red
+	.press__date
+		margin-bottom: 20px
+		color: #555 
+	.press__text
+		+m
+			font-size: 16px
 
+.career
+	+clr
+	.career__pic
+		float: left
+		margin-right: 60px 
+		font-size: 0
+		+m
+			float: none
+			margin: 0 0 10px 
+	.career__info
+		display: table
+	.career__links
+		+m
+			font-size: 16px
+		li
+			position: relative
+			padding-left: 15px
+			&:before
+				content: ""
+				position: absolute
+				top: 7px
+				left: 0
+				+s(arr-right-red)
+				+m
+					top: 5px
+		a
+			text-decoration: underline 
 
-
-
-
-
-
+.vacancy
+	+clr
+	.vacancy__pic
+		float: left
+		margin-right: 60px 
+		font-size: 0
+		+m
+			float: none
+			margin: 0 0 10px 
+	.vacancy__list
+		float: left
+		width: 380px
+		+m
+			float: none
+			width: 100%
+	.vacancy__item
+		position: relative
+		padding-bottom: 10px
+		margin-bottom: 25px
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 56px 
+			height: 2px
+			background: #A0A0A0 
+	.vacancy__title
+		margin-bottom: 10px
+		font-size: 22px
+	.vacancy__city
+		margin: 5px 0
+		font-size: 16px
+	.vacancy__foot
+		+clr
+	.vacancy__date
+		float: left
+		font-size: 16px
+		color: #666
+	.vacancy__more
+		float: right
+		a
+			position: relative
+			padding-right: 15px
+			font-size: 16px
+			vertical-align: top
+			&:before
+				content: ""
+				position: absolute
+				top: 5px
+				right: 0
+				+s(arr-right-red)
 
 
 
