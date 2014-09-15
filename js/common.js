@@ -43,13 +43,26 @@ head.ready(function() {
 		$(this).parent().next().removeClass('is-moved');
 	});
 	logist_category.on('click', function () {
-		if (!$(this).hasClass('is-active')) {
-			logist_category.removeClass('is-active');
-			logist_text.slideUp();
-			$(this).addClass('is-active');
-			$(this).next().slideDown();
-		};
+		$(this).toggleClass('is-active');
+		$(this).next().slideToggle();
 	});
+
+	// history
+	function history(){
+	  var el = $('.js-history');
+	      	link = el.find('.history__brands li'),
+	      	item = el.find('.history__text li');
+	  link.removeClass('is-active');
+	  link.on('click', function(){
+	  	link.removeClass('is-active');
+	  	$(this).addClass('is-active');
+	  	item.hide();
+	  	var index = $(this).index();
+	  	item.eq(index).fadeIn();
+	  	return false;
+	  }).first().trigger('click');
+	};
+	history();
 
 	// scroll
 	$(window).on('scroll touchmove mousewheel', function(){

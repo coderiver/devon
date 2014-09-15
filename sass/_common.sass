@@ -53,6 +53,13 @@ $red: #e31e24
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 	font-weight: 300
 
+=p
+	+r(1760)
+		@content
+=m
+	+r(980)
+		@content
+
 body
 	+f
 	font-size: 20px 
@@ -67,35 +74,35 @@ a
 .wrapper
 	min-height: 100%
 	margin-bottom: -300px
-	+r(980)
+	+m
 		margin-bottom: -250px
 
 .push
 	height: 300px
-	+r(980)
+	+m
 		height: 250px
 
 .l-center
 	max-width: 1700px
 	margin: 0 auto
 	padding: 0 30px
-	+r(1760)
+	+p
 		max-width: 900px
-	+r(980)
+	+m
 		max-width: 290px
 		padding: 0 15px
 	&.l-center_small
 		max-width: 1360px
-		+r(1760)
+		+p
 			max-width: 900px
-		+r(980)
+		+m
 			max-width: 290px
 			padding: 0 15px
   
 .header
 	margin-bottom: 40px
 	background: #101010   
-	+r(980)
+	+m
 		margin-bottom: 20px
 	.header__in
 		position: relative
@@ -105,16 +112,16 @@ a
 		font-size: 0
 	.phone
 		margin: 100px 0 0 75px 
-		+r(1760)
+		+p
 			margin: 93px 0 0 10px
-		+r(980)
+		+m
 			top: 39px
 			margin: 0 
 	.nav-btn
 		top: 10px
 	.nav
 		margin-top: 25px
-		+r(980)
+		+m
 			margin: 0
 	.nav__list
 		&.is-active
@@ -127,7 +134,7 @@ a
 				right: 0
 				height: 6px 
 				background: $red 
-				+r(980)
+				+m
 					display: none
 		li
 			&.is-active
@@ -142,14 +149,14 @@ a
 	right: 15px
 	+s(menu-ico)
 	z-index: 4 
-	+r(980)
+	+m
 		display: block
 
 .main
 	margin-bottom: 85px
 	padding-bottom: 4px
 	border-bottom: 2px solid #1d1e1d 
-	+r(1760)
+	+p
 		margin-bottom: 45px
 	.main__bg
 		background: url(../img/bg-main.jpg) 50% 50%
@@ -160,9 +167,9 @@ a
 		max-width: 1520px
 		margin: 0 auto
 		padding: 0 30px
-		+r(1760)
+		+p
 			max-width: 900px
-		+r(980)
+		+m
 			max-width: 290px
 			height: 825px
 			padding: 0 15px
@@ -172,7 +179,7 @@ a
 		padding-top: 60px
 		margin-bottom: 100px
 		+clr
-		+r(980)
+		+m
 			min-height: 13px
 			padding: 0 
 			margin: 0
@@ -181,11 +188,11 @@ a
 	.main__logo
 		float: left
 		font-size: 0
-		+r(980)
+		+m
 			margin-bottom: 20px
 	.main__serv
 		float: right
-		+r(980)
+		+m
 			text-align: center
 	.main__serv-item
 		display: inline-block
@@ -193,10 +200,10 @@ a
 		background: #fff
 		text-align: center
 		vertical-align: top
-		+r(1760)
+		+p
 			width: 230px
 			margin-left: 8px 
-		+r(980)
+		+m
 			margin: 0 0 8px
 	.main__serv-pic
 		position: relative
@@ -215,14 +222,14 @@ a
 		font-size: 20px
 		text-transform: uppercase
 		color: #333
-		+r(1760)
+		+p
 			padding: 16px 0 17px
 			font-size: 16px
 
 .phone
 	float: left
 	font-size: 0
-	+r(980)
+	+m
 		float: none
 		position: absolute
 		top: 61px
@@ -235,21 +242,21 @@ a
 		margin-right: 25px
 		font-size: 22px
 		color: #C5C5C5 
-		+r(1760)
+		+p
 			font-size: 20px
-		+r(980)
+		+m
 			margin-right: 15px
 			font-size: 18px
 	.phone__ico
 		+s(marker)
-		+r(980)
+		+m
 			+s(marker-s)
 
 .nav
 	float: right
 	margin-top: 8px
 	&.nav_main
-		+r(980)
+		+m
 			display: none
 			position: absolute
 			top: 0
@@ -260,7 +267,7 @@ a
 			background: #101010 
 			z-index: 2  
 		.nav__list
-			+r(980)
+			+m
 				display: block
 				padding: 0
 				margin-bottom: 10px
@@ -292,7 +299,7 @@ a
 				a
 					text-transform: uppercase
 					font-size: 20px
-					+r(1760)
+					+p
 						font-size: 18px
 		a
 			color: #c5c5c5
@@ -300,34 +307,34 @@ a
 
 .slider
 	margin-bottom: 180px
-	+r(1760)
+	+p
 		margin-bottom: 70px
-	+r(980)
+	+m
 		margin-bottom: 45px
 	.slider__nav
 		margin-bottom: 45px
 		text-align: center
-		+r(980)
+		+m
 			margin-bottom: 20px
 	.slider__nav-in
 		display: inline-block
 		padding: 0 15px 7px
 		border-bottom: 1px solid #a0a0a0 
 		font-size: 0
-		+r(980)
+		+m
 			padding: 0 0 8px
 		a
 			position: relative
 			display: inline-block
 			font-size: 18px
 			color: #9E9E9E 
-			+r(1760)
+			+p
 				font-size: 16px
-			+r(980)
+			+m
 				font-size: 14px
 			&:first-child
 				margin-right: 30px
-				+r(980)
+				+m
 					margin-right: 5px
 			&.is-active
 				color: #404040
@@ -345,21 +352,21 @@ a
 		position: relative
 		max-width: 1210px
 		margin: 0 auto
-		+r(1760)
+		+p
 			max-width: 850px
 	.slider__in
 		margin-bottom: 15px
 		padding-bottom: 60px
 		border-bottom: 2px solid #a0a0a0
-		+r(980)	
+		+m	
 			padding-bottom: 40px
 			margin-bottom: 10px 
 	.slider__about
 		font-size: 30px
 		text-align: center
-		+r(1760)
+		+p
 			font-size: 24px
-		+r(980)
+		+m
 			font-size: 16px
 	.slider__list
 		position: relative
@@ -369,15 +376,15 @@ a
 		margin-top: -78px
 		background: none
 		font-size: 0 
-		+r(980)
+		+m
 			display: none
 	.slider__prev
 		left: -170px
-		+r(1760)
+		+p
 			left: -30px
 	.slider__next
 		right: -170px
-		+r(1760)
+		+p
 			right: -30px
 	.slider__item
 		width: 100%
@@ -385,9 +392,9 @@ a
 		position: relative
 		width: 100%
 		height: 600px
-		+r(1760)
+		+p
 			height: 430px
-		+r(980)
+		+m
 			height: 400px
 	.slider__pic
 		position: absolute
@@ -398,10 +405,10 @@ a
 		background: #FFF 
 		border: 2px solid $red 
 		+vertical
-		+r(1760)
+		+p
 			width: 172px
 			height: 172px
-		+r(980)
+		+m
 			width: 130px
 			height: 130px
 		&:after
@@ -415,11 +422,11 @@ a
 			border-radius: 50% 
 			border: 5px solid #404040
 			z-index: 2
-			+r(1760)
+			+p
 				width: 116px
 				height: 116px
 				margin: -63px 0 0 -63px
-			+r(980)
+			+m
 				width: 88px
 				height: 88px
 				margin: -49px 0 0 -49px
@@ -431,65 +438,65 @@ a
 		.slider__pic-in
 			width: 530px
 			height: 530px
-			+r(1760)
+			+p
 				width: 334px
 				height: 334px
-			+r(980)
+			+m
 				width: 250px
 				height: 250px
 			&:after
 				width: 360px
 				height: 360px
 				margin: -185px 0 0 -185px
-				+r(1760)
+				+p
 					width: 224px
 					height: 224px
 					margin: -117px 0 0 -117px 
-				+r(980)
+				+m
 					width: 170px
 					height: 170px
 					margin: -90px 0 0 -90px
 	.slider__text
 		position: absolute
 		font-size: 30px
-		+r(1760)	
+		+p	
 			font-size: 18px
-		+r(980)
+		+m
 			font-size: 10px
 		span
 			display: inline-block
 			font-size: 120px 
 			vertical-align: top
 			line-height: 0.8
-			+r(1760)	
+			+p	
 				font-size: 74px
-			+r(980)
+			+m
 				font-size: 48px
 	.slider__text_1
 		top: 80px
 		left: 10px
 		width: 540px
-		+r(1760)
+		+p
 			left: 50px
 			width: 340px
-		+r(980)
+		+m
 			top: 0
 			left: 0
 			width: 230px
 	.slider__text_2
 		bottom: 0
 		left: 350px
-		+r(1760)
+		+p
 			left: 270px
-		+r(980)
+		+m
 			left: 140px
 	.slider__text_3
 		top: 100px
 		right: 10px
 		width: 560px
-		+r(1760)
+		+p
 			width: 400px
-		+r(980)
+		+m
 			top: 0
 			right: 0
 			width: 200px
@@ -497,45 +504,45 @@ a
 		bottom: 0
 		right: 280px
 		width: 420px
-		+r(1760)
+		+p
 			right: 180px
-		+r(980)
+		+m
 			right: 140px
 			width: 150px
 	.slider__pic_1
 		top: 0
 		right: 0
-		+r(1760)
+		+p
 			right: 50px
-		+r(980)
+		+m
 			top: 65px
 			right: 0
 	.slider__pic_2
 		bottom: 0
 		left: 0
-		+r(1760)
+		+p
 			left: 50px
-		+r(980)
+		+m
 			left: 0
 	.slider__pic_3
 		top: 0
 		left: 0
-		+r(1760)
+		+p
 			left: 50px
-		+r(980)
+		+m
 			top: 55px
 			left: 0
 	.slider__pic_4
 		bottom: 0
 		right: 0
-		+r(1760)
+		+p
 			right: 50px
-		+r(980)
+		+m
 			right: 0
 
 .partners
 	margin-bottom: 180px
-	+r(980)
+	+m
 		margin-bottom: 45px
 	.partners__title
 		position: relative
@@ -545,11 +552,11 @@ a
 		font-size: 36px
 		line-height: 1
 		text-transform: uppercase
-		+r(1760)
+		+p
 			margin-bottom: 40px
 			padding-bottom: 10px
 			font-size: 26px
-		+r(980)
+		+m
 			font-size: 22px
 		&:after
 			content: ""
@@ -563,7 +570,7 @@ a
 	.partners__list
 		font-size: 0
 		border: 1px solid #a0a0a0
-		+r(980)
+		+m
 			border-width: 1px 0 0 1px
 		li
 			display: inline-block
@@ -574,9 +581,9 @@ a
 			box-sizing: border-box
 			vertical-align: top
 			+vertical
-			+r(1760)
+			+p
 				height: 104px
-			+r(980)
+			+m
 				width: 50%
 				height: 100px
 				border: 1px solid #a0a0a0 
@@ -584,7 +591,7 @@ a
 			&:first-child
 				width: 17%
 				border: none
-				+r(980)
+				+m
 					width: 50%
 					border: 1px solid #a0a0a0 
 					border-width: 0 1px 1px 0
@@ -597,13 +604,13 @@ a
 	position: relative
 	height: 300px
 	background: #101010 
-	+r(980)
+	+m
 		height: 250px
 	.footer__in
 		min-height: 185px
 		padding-top: 65px
 		+clr
-		+r(980)
+		+m
 			min-height: 174px
 			padding-top: 25px
 	.footer__left
@@ -628,7 +635,7 @@ a
 		font-size: 18px
 		color: #B1B1B1 
 		span
-			+r(980)
+			+m
 				display: none
 	.footer__created
 		float: right
@@ -641,17 +648,17 @@ a
 			margin-right: 15px
 			font-size: 18px
 			color: #B1B1B1 
-			+r(980)
+			+m
 				font-size: 12px 
 		a
 			+s(mediahero)
-		+r(980)
+		+m
 			position: absolute
 			bottom: 60px
 			left: 15px
 	.nav
 		margin: 0
-		+r(980)
+		+m
 			display: none
 
 

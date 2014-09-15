@@ -2,7 +2,9 @@
 .breadcrumbs
 	margin-bottom: 100px
 	font-size: 0
-	+r(980)
+	+p
+		margin-bottom: 50px
+	+m
 		margin-bottom: 25px
 	li
 		position: relative
@@ -10,7 +12,7 @@
 		padding-left: 20px
 		font-size: 16px
 		color: #262626 
-		+r(980)
+		+m
 			font-size: 14px
 		&:before
 			content: ""
@@ -33,7 +35,9 @@
 	&.title_logistic
 		max-width: 100%
 		margin-bottom: 100px
-	+r(980)
+		+p
+			margin-bottom: 40px
+	+m
 		margin: 0 auto 15px
 	.title__in
 		position: relative
@@ -42,7 +46,9 @@
 		text-align: center
 		font-size: 30px
 		line-height: 1.1
-		+r(980)
+		+p
+			font-size: 24px
+		+m
 			padding-bottom: 10px
 			font-size: 18px
 		&:after
@@ -54,7 +60,7 @@
 			height: 3px
 			margin-left: -145px
 			background: $red 
-			+r(980)
+			+m
 				width: 160px
 				margin-left: -80px
 	.title__text
@@ -62,6 +68,11 @@
 		margin: 0 auto
 		padding: 20px 0 0 0 
 		font-size: 20px
+		+p
+			font-size: 18px
+		+m
+			font-size: 16px
+			text-align: left
 		p
 			margin-bottom: 20px
 			
@@ -92,14 +103,14 @@
 	.dev__list
 		margin-bottom: 150px 
 		overflow: hidden
-		+r(1760)
+		+p
 			margin-bottom: 65px
-		+r(980)
+		+m
 			margin-bottom: 15px
 	.dev__list-in
 		margin-right: -20px
 		overflow: hidden
-		+r(980)
+		+m
 			margin: 0
 			border: 1px solid #a0a0a0
 			border-width: 1px 0 0 1px
@@ -109,9 +120,9 @@
 			height: 228px
 			margin: 0 10px 10px 0
 			border: 1px solid #a0a0a0
-			+r(1760)
+			+p
 				margin: 0 5px 5px 0
-			+r(980)	
+			+m	
 				width: 143px
 				height: auto
 				margin: 0
@@ -121,7 +132,7 @@
 		.dev__pic
 			float: left
 			font-size: 0
-			+r(980)
+			+m
 				display: none
 		.dev__type
 			position: relative
@@ -129,7 +140,7 @@
 			font-size: 18px
 			color: #262626 
 			overflow: hidden
-			+r(980)
+			+m
 				display: table-cell
 				width: 143px
 				height: 90px
@@ -144,29 +155,29 @@
 				width: 70px
 				height: 2px
 				background: $red
-				+r(980)
+				+m
 					display: none 
 	.dev__info
 		margin-bottom: 70px
 		.dev__item
 			margin-bottom: 85px 
-			+r(1760)
+			+p
 				margin-bottom: 40px
-			+r(980)
+			+m
 				margin-bottom: 20px
 		.dev__pic, .dev__in
 			display: table-cell
 			vertical-align: top
-			+r(980)
+			+m
 				display: block
 		.dev__pic
 			width: 446px
 			padding-right: 60px
 			font-size: 0
-			+r(1760)
+			+p
 				width: 355px
 				padding-right: 45px
-			+r(980)
+			+m
 				float: left
 				width: 115px
 				padding: 0
@@ -174,7 +185,7 @@
 		.dev__in
 			padding-bottom: 40px
 			border-bottom: 1px solid #a0a0a0 
-			+r(980)
+			+m
 				padding: 0
 				border: none
 		.dev__title
@@ -182,9 +193,9 @@
 			padding-top: 75px
 			margin-bottom: 30px 
 			font-size: 24px 
-			+r(1760)
+			+p
 				padding-top: 60px
-			+r(980)
+			+m
 				min-height: 95px
 				padding-top: 20px
 				margin-bottom: 10px
@@ -197,7 +208,7 @@
 				width: 70px
 				height: 2px
 				background: $red 
-				+r(980)
+				+m
 					top: 0
 					left: 110px
 					right: 0
@@ -205,7 +216,7 @@
 		.dev__content
 			font-size: 18px
 			line-height: 1.3
-			+r(980)
+			+m
 				font-size: 16px
 			p, ul
 				margin-bottom: 10px 
@@ -222,29 +233,8 @@
 
 .team
 	margin-bottom: 100px
-	+r(980)
+	+m
 		margin-bottom: 50px
-	.team__title
-		position: relative
-		margin-bottom: 30px 
-		font-size: 30px
-		text-align: center
-		+r(980)
-			padding-bottom: 10px
-			border-bottom: 1px solid #A0A0A0 
-			font-size: 22px
-			&:after
-				content: ""
-				position: absolute
-				bottom: -2px
-				left: 50%
-				width: 290px
-				height: 3px
-				margin-left: -145px
-				background: $red 
-				+r(980)
-					width: 160px
-					margin-left: -80px
 	.team__list
 		font-size: 0
 		overflow: hidden
@@ -255,10 +245,10 @@
 		float: left
 		width: 330px
 		margin: 0 15px 45px 0
-		+r(1760)
+		+p
 			width: 217px
 			margin: 0 10px 35px 0
-		+r(980)
+		+m
 			width: 100%
 			margin: 0 0 25px
 	.team__btn
@@ -280,23 +270,23 @@
 		border-left: 70px solid $red 
 		background: rgb(0,0,0)
 		background: rgba(0,0,0,.75) 
-		+r(1760)
+		+p
 			border-width: 42px
 		li
 			margin-left: -70px
-			+r(1760)
+			+p
 				margin-left: -42px
 	.team__in
 		position: relative
 		margin-bottom: 20px
-		+r(980)
+		+m
 			display: none
 	.team__pic
 		position: relative
 		width: 330px
 		height: 200px
 		overflow: hidden
-		+r(1760)
+		+p
 			width: 217px
 			height: 180px
 	.team__pic-in
@@ -315,20 +305,20 @@
 		display: table-cell
 		height: 60px
 		vertical-align: middle
-		+r(1760)
+		+p
 			height: 50px
 	.team__content
 		padding-left: 15px
 		font-size: 16px
 		color: #FFF 
-		+r(1760)
+		+p
 			font-size: 14px
 		a
 			color: #FFF 
 	.team__ico
 		width: 70px
 		text-align: center
-		+r(1760)
+		+p
 			width: 42px
 		i
 			display: inline-block
@@ -341,18 +331,18 @@
 		+s(team-marker)
 	.team__name
 		font-size: 20px
-		+r(980)
+		+m
 			font-size: 18px
 	.team__position
 		font-size: 16px
-		+r(980)
+		+m
 			font-size: 14px
 	.team__contacts
 		display: none
 		margin-top: 10px
 		padding: 10px 0
 		background: #e6e5e5 
-		+r(980)
+		+m
 			display: block
 		.team__content,
 		.team__ico
@@ -399,6 +389,8 @@
 .logist
 	margin-bottom: 80px
 	overflow: hidden
+	+m
+		margin-bottom: 50px
 	.logist__left,
 	.logist__right
 		position: relative	
@@ -406,8 +398,16 @@
 		height: 626px
 		border-radius: 10px 
 		overflow: hidden
+		+p
+			width: 390px
+			height: 421px 
+		+m
+			width: 290px
+			height: 313px
 	.logist__left
 		float: left
+		+m
+			margin-bottom: 20px
 		.logist__pic
 			left: auto
 			right: 0
@@ -440,10 +440,16 @@
 		right: 25px
 		width: 530px
 		color: #fff
+		+p
+			width: 340px 
+		+m
+			width: 240px
 	.logist__type-in
 		margin-bottom: 50px
 		font-size: 24px
 		text-transform: uppercase
+		+p
+			font-size: 20px
 	.logist__more
 		font-size: 0
 		span, i
@@ -452,6 +458,10 @@
 		span
 			margin: 0 10px
 			font-size: 20px
+			+p
+				font-size: 18px
+			+m
+				font-size: 16px
 	.logist__title
 		position: relative
 		padding: 8px 48px 8px 20px
@@ -459,6 +469,10 @@
 		font-size: 24px
 		color: #FFF  		
 		cursor: pointer	
+		+p
+			font-size: 20px
+		+m
+			font-size: 16px
 		&:after
 			content: ""
 			position: absolute
@@ -469,18 +483,27 @@
 		display: none
 		padding: 8px 20px
 		font-size: 18px
+		+p
+			font-size: 16px
+		+m
+			font-size: 14px
 	.logist__category
 		position: relative
 		padding: 8px 48px 8px 20px
 		margin-bottom: 1px
 		font-size: 24px
 		cursor: pointer
+		+p
+			font-size: 20px
+		+m
+			font-size: 16px
 		&.is-active
 			&:before
 				background: $red 
 			&:after
 				top: 19px
 				right: 14px
+				margin-top: -5px
 				+s(arr-down-white)
 		&:after, &:before
 			content: ""
@@ -490,14 +513,15 @@
 			position: absolute
 			top: 0
 			right: 0
+			bottom: 0
 			width: 48px
-			height: 44px
 			background: #a0a0a0
 		&:after
 			content: ""
 			position: absolute
-			top: 13px
+			top: 50%
 			right: 19px
+			margin-top: -10px
 			+s(arr-right-white) 
 	.logist__category_dark
 		background: #e7e5e6 
@@ -506,9 +530,13 @@
 	position: relative
 	height: 8800px
 	margin-bottom: 100px
+	+p
+		height: 8660px
+	+m
+		display: none
 	&.sl-slide-1
 		.sl__item_2
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 			.sl__point
@@ -521,14 +549,14 @@
 			+transform(translateX(0px))
 	&.sl-slide-2
 		.sl__item_2
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 			.sl__point
 				visibility: hidden
 				opacity: 0
 		.sl__item_3
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 				+transform(translateX(0px))
@@ -543,7 +571,7 @@
 			+transform(translateX(0px))
 	&.sl-slide-3
 		.sl__item_4
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 			.sl__point
@@ -558,7 +586,7 @@
 			+transform(translateX(0px))
 	&.sl-slide-4
 		.sl__item_5
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 			.sl__point
@@ -574,14 +602,14 @@
 			+transform(translateX(0px))
 	&.sl-slide-5
 		.sl__item_5
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 			.sl__point
 				visibility: hidden
 				opacity: 0 
 		.sl__item_6
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 				+transform(translateY(0px))
@@ -599,7 +627,7 @@
 			+transform(translateX(0px))
 	&.sl-slide-6
 		.sl__item_7
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 				+transform(translateX(0px))
@@ -618,14 +646,14 @@
 			+transform(translateX(0px))
 	&.sl-slide-7
 		.sl__item_7
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 			.sl__point, .sl__item-pic
 				visibility: hidden
 				opacity: 0 
 		.sl__item_8
-			img
+			>picture
 				visibility: visible
 				opacity: 1
 				+transform(translateX(0px))
@@ -659,21 +687,28 @@
 		padding-top: 10px
 		background: #fff
 		box-sizing: border-box
+		+p
+			height: 660px
 	.sl__in
 		position: relative
 		height: 720px
+		+p
+			height: 560px
 	.sl__list
 		position: absolute
 		right: 230px
 		bottom: 0
 		left: 0
 		top: 0
+		+p
+			right: 130px
 	.sl__item
 		position: absolute
 		right: 0
 		bottom: 0
 		font-size: 0
-		img
+		>picture
+			display: inline-block
 			visibility: hidden
 			opacity: 0
 			+transition-delay(.2s)
@@ -688,6 +723,11 @@
 		padding-left: 20px
 		border-left: 2px solid $red 
 		font-size: 18px
+		+p
+			top: 85px
+			width: 110px
+			min-height: 0
+			font-size: 14px
 		li
 			visibility: hidden
 			opacity: 0
@@ -711,31 +751,39 @@
 			left: auto
 			right: -82px
 			bottom: 0
-			+s(sl-point-down)
+			+p
+				right: -54px
 		.sl__point-text
 			margin: 0
 	.sl__point-ico
 		position: absolute
 		left: -83px
 		bottom: -83px
-		+s(sl-point)
+		font-size: 0
+		+p
+			left: -54px
+			bottom: -54px
 	.sl__point-text
 		min-width: 200px
 		padding: 0 10px 10px
 		border-bottom: 1px solid $red 
 		font-size: 16px
+		+p
+			font-size: 14px
 		span
 			display: inline-block
 			font-size: 48px
 			line-height: 0.8
 			vertical-align: top
+			+p
+				font-size: 32px
 	.sl__item_1
 		top: 0
 		left: 0
 		bottom: auto
 		right: auto
 		padding-top: 70px
-		img
+		>picture
 			visibility: visible
 			opacity: 1
 		.sl__point
@@ -744,51 +792,160 @@
 			visibility: visible
 			opacity: 1
 			+transform(translateX(0px))
+			+p
+				top: 10px
+				left: 400px
 	.sl__item_2, .sl__item_3
 		.sl__point
 			right: 445px
 			bottom: 15px
+			+p
+				right: 294px
 	.sl__item_3
 		.sl__point-text
 			width: 250px
-		img
+			+p
+				width: 220px
+		>picture
 			+transform(translateX(100px))
 	.sl__item_4
 		.sl__point
 			right: 535px
 			bottom: 0px
+			+p
+				right: 347px
 		.sl__point-text
 			width: 270px
+			+p
+				width: 250px
 	.sl__item_5, .sl__item_6
 		.sl__point
 			right: 540px
 			bottom: 10px
+			+p
+				right: 330px
 		.sl__point-text
 			width: 300px
 	.sl__item_6
-		img
+		>picture
 			+transform(translateY(100px))
 	.sl__item_7, .sl__item_8
 		bottom: 60px
+		+p
+			right: -50px
+		>picture
+			position: relative
 		.sl__point
 			right: 610px
 			bottom: -50px
 			z-index: 6 
+			+p
+				right: 454px
+				bottom: -41px
 	.sl__item_7
-		min-width: 547px
-		img
+		width: 547px
+		+p
+			width: 411px
+		>picture
 			position: relative
 			z-index: 4 
 		.sl__item-pic
-			margin-bottom: -30px
+			bottom: -30px
 			+transform(translateX(100px))
 	.sl__item_8	
 		.sl__item-pic
-			margin: 0 -85px -10px 0
+			right: -85px
+			bottom: -10px
 			+transform(translateX(100px))
+			+p
+				right: 0
+				bottom: -14px
 		
+.history
+	margin-bottom: 150px
+	+clr
+	+p
+		margin-bottom: 50px
+	.history__brands
+		float: left
+		width: 350px
+		margin-right: 50px
+		+p
+			width: 260px
+			margin: 0
+		+m
+			float: none
+			width: auto
+			margin: 0 -5px 20px 0
+			overflow: hidden
+		li
+			float: left
+			width: 163px
+			height: 143px
+			margin: 0 4px 4px 0
+			border: 1px solid #a0a0a0
+			+vertical
+			cursor: pointer
+			+p
+				width: 115px
+				height: 100px
+				margin: 0 2px 2px 0
+			+m
+				width: 69px
+				height: 62px
+				margin: 0 1px 0 0
+			&.is-active
+				border-color: $red
+				img
+					+gray-zero
+			img
+				max-width: 100%
+				max-height: 100%
+				vertical-align: middle
+				+gray
+	.history__text
+		display: table
+		font-size: 18px
+		+m
+			font-size: 16px
+		li
+			display: none
+			>*
+				margin-bottom: 20px 
+				+p
+					margin-bottom: 10px
+		blockquote
+			max-width: 60%
+			margin-left: 40px
+			padding-left: 20px
+			border-left: 5px solid $red
+			+p
+				max-width: 80%
+			+m
+				max-width: 100%
+				margin-left: 0 
 
-
+.title-simple
+	position: relative
+	margin-bottom: 30px 
+	font-size: 30px
+	text-align: center
+	+m
+		padding-bottom: 10px
+		border-bottom: 1px solid #A0A0A0 
+		font-size: 22px
+		&:after
+			content: ""
+			position: absolute
+			bottom: -2px
+			left: 50%
+			width: 290px
+			height: 3px
+			margin-left: -145px
+			background: $red 
+			+m
+				width: 160px
+				margin-left: -80px
 
 
 
