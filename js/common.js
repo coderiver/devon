@@ -10,7 +10,7 @@ head.ready(function() {
 	// team
 	$('.js-team').on('click', function () {
 		$(this).toggleClass('is-active');
-		$(this).next().fadeToggle();
+		$(this).next().toggle();
 	});
 
 	// threed	

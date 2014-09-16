@@ -47,11 +47,15 @@
 // p
 // 	+jpg(bla)
 
++font(Lato Regular, lato-regular)  
+=book
+	font-family: "Lato Regular", Arial, sans-serif 
+
 $red: #e31e24
 
+
 =f
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
-	font-weight: 300
+	font-family: "Lato", Arial, sans-serif
 
 =p
 	+r(1760)
@@ -74,6 +78,8 @@ button, input, textarea
 a
 	text-decoration: none
 	color: $red 
+h1, h2, h3, h4, h5, h6
+	font-weight: 400 
 
 // common blocks
 .wrapper
@@ -119,17 +125,21 @@ a
 				left: 0 
 				width: 100%
 				height: 55px
+				+gpu
 			.header__logo-big
 				display: none
 			.header__logo-sticker
 				display: block
 			.nav
-				margin: 0
+				padding: 0
+				overflow: visible
 			.nav__list
+				position: static
 				height: 55px - 17px
 				margin: 0
 				padding-top: 17px
-				border: none
+				&:after
+					display: none
 				&:hover
 					.nav__list-in
 						display: block
@@ -188,9 +198,10 @@ a
 	.nav-btn
 		top: 10px
 	.nav
-		margin-top: 25px
+		margin: 0
+		padding-top: 25px
 		+m
-			margin: 0
+			padding: 0
 	.nav__list
 		&.is-active
 			.nav__list-title
@@ -287,13 +298,18 @@ a
 			height: 1px
 			background: rgba(0,0,0,.15)
 	.main__serv-title
-		padding: 24px 0 38px
+		display: table-cell
+		width: 368px
+		height: 60px
 		font-size: 20px
 		text-transform: uppercase
 		color: #333
+		vertical-align: middle
 		+p
-			padding: 16px 0 17px
+			width: 230px
 			font-size: 16px
+		+m
+			height: 50px
 
 .phone
 	float: left
@@ -325,6 +341,7 @@ a
 	float: right
 	margin-top: 8px
 	color: #c5c5c5
+	overflow: hidden
 	+header_fixed
 		display: block !important
 	+m
@@ -338,10 +355,26 @@ a
 		background: #101010 
 		z-index: 2  
 	.nav__list
-		display: table-cell
+		position: relative
+		float: left
 		padding: 0 15px
-		border-left: 1px solid #5F5F5F
 		vertical-align: top 
+		+p
+			width: 120px
+			&:first-child, &:last-child
+				width: auto
+			&:last-child
+				padding: 0 0 0 15px
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 1px
+			height: 200px
+			background: #5f5f5f 
+			+m
+				display: none
 		+m
 			display: block
 			padding: 0
@@ -354,7 +387,8 @@ a
 				a
 					font-size: 18px
 		&:first-child
-			border: none
+			&:after
+				display: none
 		li
 			line-height: 1.1
 		a
@@ -396,6 +430,7 @@ a
 			+p
 				font-size: 16px
 			+m
+				width: 40%
 				font-size: 14px
 			&:first-child
 				margin-right: 30px
@@ -532,7 +567,7 @@ a
 			display: inline-block
 			font-size: 120px 
 			vertical-align: top
-			line-height: 0.8
+			line-height: 0.9
 			+p	
 				font-size: 74px
 			+m
