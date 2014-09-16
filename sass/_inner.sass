@@ -1184,6 +1184,28 @@
 
 .vacancy
 	+clr
+	&.vacancy_request
+		max-width: 700px
+		.vacancy__price
+			margin-bottom: 40px
+			font-size: 22px
+			+m
+				margin-bottom: 20px
+				font-size: 18px
+		.vacancy__city
+			margin-bottom: 20px
+			font-size: 20px
+			+m
+				font-size: 16px
+			p
+				margin-bottom: 10px
+		.vacancy__date
+			margin-bottom: 40px
+			padding: 10px 0 0 0
+			&:after
+				top: 0
+				bottom: auto
+				width: 160px
 	.vacancy__pic
 		float: left
 		margin-right: 60px 
@@ -1199,16 +1221,7 @@
 			width: 100%
 	.vacancy__item
 		position: relative
-		padding-bottom: 10px
 		margin-bottom: 25px
-		&:after
-			content: ""
-			position: absolute
-			bottom: 0
-			left: 0
-			width: 56px 
-			height: 2px
-			background: #A0A0A0 
 	.vacancy__title
 		margin-bottom: 10px
 		font-size: 22px
@@ -1218,9 +1231,19 @@
 	.vacancy__foot
 		+clr
 	.vacancy__date
+		position: relative
 		float: left
+		padding-bottom: 10px
 		font-size: 16px
 		color: #666
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 56px 
+			height: 2px
+			background: #A0A0A0 
 	.vacancy__more
 		float: right
 		a
@@ -1235,18 +1258,88 @@
 				right: 0
 				+s(arr-right-red)
 
+.form
+	max-width: 600px
+	.form__title
+		margin-bottom: 25px
+		+m
+			font-size: 18px
 
+.field
+	display: block
+	margin-bottom: 15px
+	font-size: 0
+	+m
+		margin-bottom: 10px
+	&.field_btn
+		padding-top: 15px
+		text-align: right
+		font-size: 0
+	.field__label, .field__in
+		display: inline-block
+		vertical-align: top
+		+m
+			display: block
+	.field__label
+		width: 180px
+		padding-top: 3px
+		margin-right: 20px
+		font-size: 20px
+		+m
+			margin: 0 0 5px
+			font-size: 16px
+	.field__in
+		max-width: 400px
+		>input, >textarea
+			width: 100%
+			border: 1px solid #a0a0a0
+			box-sizing: border-box
+			font-size: 16px
+		>input
+			height: 29px
+			padding: 0 7px
+		>textarea
+			display: block
+			height: 100px
+			padding: 4px 7px
+			resize: vertical 
 
+.select
+	position: relative
+	.select__head	
+		position: relative
+		width: 100%
+		height: 29px
+		padding: 0 7px
+		border: 1px solid #a0a0a0
+		box-sizing: border-box
+		font-size: 16px
+		line-height: 29px
+		&:after
+			content: ""
+			position: absolute
+			top: 11px
+			right: 10px
+			+arr(10,6,#343434,b)
+	.select__el
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border: none
+		opacity: 0 
 
+.load
+	input
+		font-size: 16px
 
-
-
-
-
-
-
-
-
+.btn
+	height: 30px
+	padding: 0 15px 2px
+	background: $red
+	color: #fff
+	font-size: 16px  
 
 
 

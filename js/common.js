@@ -108,6 +108,18 @@ head.ready(function() {
 		}
 	}
 
+	// native select
+		function native_select() {
+		  var el = $('.js-select'),
+		  		select = el.find('.select__el');
+		  select.on('change', function(){
+	    var option_selected = $(this).find('option:selected'),
+	    		value_selected = option_selected.text();
+	    		$(this).prev().text(value_selected);
+			});
+		};
+		native_select();
+
 	// scroll
 	$(window).on('scroll touchmove mousewheel', function(){
 		header();
