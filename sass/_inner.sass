@@ -120,6 +120,7 @@
 			height: 228px
 			margin: 0 10px 10px 0
 			border: 1px solid #a0a0a0
+			cursor: pointer
 			+p
 				margin: 0 5px 5px 0
 			+m	
@@ -385,6 +386,18 @@
 		+transform(translateZ(680px))
 	.threed__item_right
 		+transform(rotateY(90deg) translateZ(680px))
+	.dev
+		.dev__list-in
+			.data__type
+				padding: 40px 25px 0
+		.dev__item
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				left: 210px
+				bottom: 15px
+				+s(dev-arr-circle)
 
 .logist
 	margin-bottom: 80px

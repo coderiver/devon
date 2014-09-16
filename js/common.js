@@ -109,16 +109,33 @@ head.ready(function() {
 	}
 
 	// native select
-		function native_select() {
-		  var el = $('.js-select'),
-		  		select = el.find('.select__el');
-		  select.on('change', function(){
-	    var option_selected = $(this).find('option:selected'),
-	    		value_selected = option_selected.text();
-	    		$(this).prev().text(value_selected);
-			});
-		};
-		native_select();
+	function native_select() {
+	  var el = $('.js-select'),
+	  		select = el.find('.select__el');
+	  select.on('change', function(){
+	  var option_selected = $(this).find('option:selected'),
+	  		value_selected = option_selected.text();
+	  		$(this).prev().text(value_selected);
+		});
+	};
+	native_select();
+
+	// dev anchors
+	function dev_anchors () {
+		var el = $('.js-dev').find('.dev__item'),
+				info = $('.js-dev-info').find('.dev__item');
+		el.on('click', function () {
+			var index = $(this).index(),
+					el_top = info.eq(index),
+					top = el_top.offset().top,
+					top_bar = 70,
+					final_top = top - top_bar;
+			$('html, body').animate({
+				scrollTop: final_top
+			}, 500);
+		})
+	}
+	dev_anchors();
 
 	// scroll
 	$(window).on('scroll touchmove mousewheel', function(){
