@@ -1,5 +1,19 @@
 head.ready(function() {
 
+	// fullpage
+	var fullpage_el = $('.js-fullpage');
+	if (fullpage_el.length) {
+		$('#fullpage').fullpage({
+			onLeave: function(index, nextIndex, direction){
+				var header = $('.js-header');
+				header.addClass('is-fixed');
+				if(nextIndex == '1') {
+					header.removeClass('is-fixed');
+				};
+			}
+		});
+	};
+
 	// mob menu
 	var menu_btn = $('.nav-btn'),
 			menu = $('.js-nav');
@@ -139,9 +153,8 @@ head.ready(function() {
 
 	// scroll
 	$(window).on('scroll touchmove mousewheel', function(){
-		header();
+		//header();
 		sl();
-		
 	})
 	
 

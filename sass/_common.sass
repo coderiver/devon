@@ -58,7 +58,7 @@ $red: #e31e24
 	font-family: "Lato", Arial, sans-serif
 
 =p
-	+r(1760)
+	+r(1366)
 		@content
 =m
 	+r(980)
@@ -70,9 +70,11 @@ $red: #e31e24
 
 body
 	+f
-	font-size: 20px 
+	font-size: 20px
 	line-height: 1.2
 	color: #333
+	&.main-page
+		font-size: 20px !important
 button, input, textarea
 	+f
 a
@@ -92,29 +94,30 @@ h1, h2, h3, h4, h5, h6
 	height: 300px
 	+m
 		height: 250px
+		
+.fullpage
+	.section
+		position: relative
+	.footer
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
 
 .l-center
 	max-width: 1700px
 	margin: 0 auto
 	padding: 0 30px
 	+p
-		max-width: 900px
-	+m
-		max-width: 290px
 		padding: 0 15px
 	&.l-center_small
 		max-width: 1360px
-		+p
-			max-width: 900px
-		+m
-			max-width: 290px
-			padding: 0 15px
   
 .header
 	position: relative
 	min-height: 156px
 	margin-bottom: 40px
-	z-index: 99 
+	z-index: 199 
 	+m
 		margin-bottom: 20px
 	&.is-fixed
@@ -135,48 +138,55 @@ h1, h2, h3, h4, h5, h6
 				overflow: visible
 			.nav__list
 				position: static
-				height: 55px - 17px
+				width: auto
 				margin: 0
-				padding-top: 17px
 				&:after
 					display: none
 				&:hover
 					.nav__list-in
-						display: block
-				&.is-active
-					.nav__list-title
-						&:before
-							top: -17px
+						height: 45px
+						visibility: visible
 			.nav__list-in
-				display: none
 				position: absolute
 				top: 55px
 				left: 0
 				right: 0
-				padding: 10px 0
+				height: 0
 				background: #FFF 
 				border-top: 1px solid #fff
 				border-bottom: 1px solid #101010 
 				box-shadow: 0 2px 0 #101010 inset
 				text-align: right
+				line-height: 45px
+				visibility: hidden
+				+tr(height .4s)
+				overflow: hidden
 				li
 					display: inline-block
 					margin-right: 15px
+					&:first-child
+						margin-right: 15px
 				a
 					color: #333 
 			.nav__list-title
 				position: relative
+				margin: 0
 				text-transform: none
+				>a
+					display: block
+					height: 55px
+					line-height: 55px
 				&.is-dropdown
 					padding-right: 15px
 					&:after
 						content: ""
 						position: absolute
-						top: 10px
+						top: 50%
 						right: 0
+						margin-top: -2px
 						+s(nav-dropdown)
 			.phone
-				margin: 15px 0 0 55px
+				margin: 10px 0 0 50px
 	.header__wrap
 		background: #101010 
 	.header__in
@@ -233,62 +243,61 @@ h1, h2, h3, h4, h5, h6
 		display: block
 
 .main
-	margin-bottom: 85px
-	padding-bottom: 4px
-	border-bottom: 2px solid #1d1e1d 
-	+p
-		margin-bottom: 45px
-	.main__bg
-		background: url(../img/bg-main.jpg) 50% 50%
-		background-size: cover  
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: url(../img/bg-main.jpg) 50% 50%
+	background-size: cover  
 	.main__center
-		height: 100vh
-		min-height: 100%
-		max-width: 1520px
-		margin: 0 auto
-		padding: 0 30px
-		+p
-			max-width: 900px
-		+m
-			max-width: 290px
-			height: 825px
-			padding: 0 15px
-	.main__header
-		position: relative
-		min-height: 175px
-		padding-top: 60px
-		margin-bottom: 100px
-		+clr
-		+m
-			min-height: 13px
-			padding: 0 
-			margin: 0
-	.main__in
-		+clr
-	.main__logo
-		float: left
-		font-size: 0
-		+m
-			margin-bottom: 20px
-	.main__serv
-		float: right
-		+m
-			text-align: center
-	.main__serv-item
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		padding-top: 100px
+		z-index: 2
+		+vertical 
+	.main__center-in
 		display: inline-block
-		margin-left: 15px
-		background: #fff
-		text-align: center
-		vertical-align: top
+		width: 100%
+		vertical-align: middle
+		.l-center
+			position: relative
+			+clr
+	.main__logo
+		position: absolute
+		top: 0
+		left: 30px
+		bottom: 0
+		width: 220px
+		font-size: 0
+		text-align: left
+		z-index: 2 
 		+p
-			width: 230px
-			margin-left: 8px 
-		+m
-			margin: 0 0 8px
+			left: 15px
+		img
+			max-width: 100%
+			max-height: 100%
+	.main__serv
+		position: relative
+		float: right
+		width: 75%
+		z-index: 4 
+		+p
+			width: 80%
+	.main__serv-item
+		float: left
+		width: 31%
+		margin-left: 2%
+		background: #fff
+		vertical-align: top
 	.main__serv-pic
 		position: relative
 		img
 			display: block
+			max-width: 100%
 		&:after
 			content: ""
 			position: absolute
@@ -298,18 +307,35 @@ h1, h2, h3, h4, h5, h6
 			height: 1px
 			background: rgba(0,0,0,.15)
 	.main__serv-title
-		display: table-cell
-		width: 368px
-		height: 60px
-		font-size: 20px
+		height: 87px
+		padding: 0 20px
 		text-transform: uppercase
 		color: #333
-		vertical-align: middle
+		+vertical
 		+p
-			width: 230px
-			font-size: 16px
-		+m
-			height: 50px
+			height: 70px
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 20px
+			+p
+				font-size: 16px
+	.l-center
+		max-width: 1520px
+	.header
+		&.is-fixed
+			.header__wrap
+				background: #101010 
+			.nav
+				padding-top: 0
+			.phone
+				margin: 10px 0 0 50px
+		.header__wrap
+			background: none
+		.nav
+			padding-top: 65px
+		.phone
+			margin: 60px 0 0 0 
 
 .phone
 	float: left
@@ -365,16 +391,6 @@ h1, h2, h3, h4, h5, h6
 				width: auto
 			&:last-child
 				padding: 0 0 0 15px
-		&:after
-			content: ""
-			position: absolute
-			top: 0
-			left: 0
-			width: 1px
-			height: 200px
-			background: #5f5f5f 
-			+m
-				display: none
 		+m
 			display: block
 			padding: 0
@@ -386,11 +402,24 @@ h1, h2, h3, h4, h5, h6
 				border-left: 1px solid $red
 				a
 					font-size: 18px
+		li
+			margin-top: 5px
+			line-height: 0.9
+			&:first-child
+				margin: 0
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 1px
+			height: 200px
+			background: #5f5f5f 
+			+m
+				display: none
 		&:first-child
 			&:after
 				display: none
-		li
-			line-height: 1.1
 		a
 			color: #c5c5c5
 			font-size: 16px
@@ -405,11 +434,11 @@ h1, h2, h3, h4, h5, h6
 			font-size: 18px
 
 .slider
-	margin-bottom: 180px
-	+p
-		margin-bottom: 70px
-	+m
-		margin-bottom: 45px
+	+vertical
+	.slider__vertical
+		display: inline-block
+		width: 100%
+		vertical-align: middle
 	.slider__nav
 		margin-bottom: 45px
 		text-align: center
@@ -641,9 +670,16 @@ h1, h2, h3, h4, h5, h6
 			right: 0
 
 .partners
-	margin-bottom: 180px
-	+m
-		margin-bottom: 45px
+	position: absolute
+	top: 55px
+	left: 0
+	right: 0
+	bottom: 300px
+	+vertical
+	.partners__in
+		display: inline-block
+		width: 100%
+		vertical-align: middle
 	.partners__title
 		position: relative
 		padding-bottom: 15px

@@ -8,24 +8,229 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
-<body>
-<!-- wrapper -->
-<div class="wrapper">
-	<!-- main -->
-	<div class="main">
-		<div class="main__bg">
+<body class="main-page">
+<!-- fullpage -->
+<div id="fullpage" class="fullpage js-fullpage">
+	<section class="section">
+		<!-- main -->
+		<div class="main">
+			<!-- header -->
+			<header class="header js-header">
+				<div class="header__wrap">
+					<div class="l-center">
+						<div class="header__in">
+							<a class="header__logo" href="#">
+								<i class="header__logo-sticker"></i>
+							</a>
+							<!-- phone -->
+							<div class="phone">
+								<div class="phone__in">Тел.: (8452) 392 -777</div>
+								<div class="phone__ico"></div>
+							</div>
+							<!-- nav -->
+							<button class="nav-btn"></button>
+							<nav class="nav js-nav">
+								<div class="nav__list">
+									<div class="nav__list-title is-dropdown"><a href="#">О компании</a></div>
+									<div class="nav__list-in">
+										<ul class="l-center">
+											<li><a href="#">Миссия и стратегия</a></li>
+											<li><a href="#">Система качества</a></li>
+											<li><a href="#">Пресс-релизы</a></li>
+											<li><a href="#">Реквизиты</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="nav__list">
+									<div class="nav__list-title is-dropdown"><a href="#">Услуги</a></div>
+									<div class="nav__list-in">
+										<ul class="l-center">
+											<li><a href="#">Логистика</a></li>
+											<li><a href="#">Девелопмент</a></li>
+											<li><a href="#">Управление недвижимостью</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="nav__list">
+									<div class="nav__list-title is-dropdown"><a href="#">Карьера</a></div>
+									<div class="nav__list-in">
+										<ul class="l-center">
+											<li><a href="#">Вакансии</a></li>
+											<li><a href="#">Программы стажировки</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="nav__list">
+									<div class="nav__list-title"><a href="#">Контакты</a></div>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
 			<div class="main__center">
-				<header class="main__header">
-					<!-- phone -->
-					<div class="phone">
-						<div class="phone__in">Тел.: (8452) 392 -777</div>
-						<div class="phone__ico"></div>
+				<div class="main__center-in">
+					<div class="l-center">
+						<div class="main__logo">
+							<img src="img/logo-l.png" alt="">
+						</div>
+						<div class="main__serv">
+							<a class="main__serv-item" href="#">
+								<div class="main__serv-pic">
+									<picture>
+									  <source media="(min-width: 960px)" srcset="img/main-serv1-l.jpg">
+									  <img src="img/main-serv1-m.jpg" srcset="img/main-serv1-m.jpg" alt="">
+									</picture>
+								</div>
+								<div class="main__serv-title"><span>Логистика</span></div>
+							</a>
+							<a class="main__serv-item" href="#">
+								<div class="main__serv-pic">
+									<picture>
+									  <source media="(min-width: 960px)" srcset="img/main-serv2-l.jpg">
+									  <img src="img/main-serv2-m.jpg" srcset="img/main-serv2-m.jpg" alt="">
+									</picture>
+								</div>
+								<div class="main__serv-title"><span>девелопмент</span></div>
+							</a>
+							<a class="main__serv-item" href="#">
+								<div class="main__serv-pic">
+									<picture>
+									  <source media="(min-width: 960px)" srcset="img/main-serv3-l.jpg">
+									  <img src="img/main-serv3-m.jpg" srcset="img/main-serv3-m.jpg" alt="">
+									</picture>
+								</div>
+								<div class="main__serv-title"><span>управление недвижимостью</span></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<!-- slider -->
+		<div class="slider">
+			<div class="slider__vertical">
+				<div class="slider__nav">
+					<div class="slider__nav-in">
+						<a href="#">площади и расположение</a>
+						<a href="#">тоннаж и обороты</a>
+					</div>
+				</div>
+				<div class="slider__center">
+					<div class="slider__list">
+						<div class="slider__in cycle-slideshow"
+							data-cycle-fx="scrollHorz"
+							data-cycle-timeout="0"
+							data-cycle-slides=".slider__item"
+							data-cycle-prev=".slider__prev"
+							data-cycle-next=".slider__next"
+							data-cycle-pager=".slider__nav-in"
+							data-cycle-pager-active-class="is-active"
+							data-cycle-pager-template="">
+							<div class="slider__item">
+								<div class="slider__item-in">
+									<div class="slider__text slider__text_1">49 000 м2 отапливаемых площадей общая площадь складских комплексов <span>70 000</span> м2</div>
+									<div class="slider__text slider__text_2"><span>7</span> км. от Саратова</div>
+									<div class="slider__pic slider__pic_big slider__pic_1">
+										<div class="slider__pic-in">
+											<picture>
+											  <source media="(min-width: 1760px)" srcset="img/infograph-ico1_1.png">
+											  <source media="(min-width: 980px)" srcset="img/infograph-ico1_1medium.png">
+											  <img src="img/infograph-ico1_1small.png" srcset="img/infograph-ico1_1small.png" alt="">
+											</picture>
+										</div>
+									</div>
+									<div class="slider__pic slider__pic_2">
+										<div class="slider__pic-in">
+											<picture>
+											  <source media="(min-width: 1760px)" srcset="img/infograph-ico1_2.png">
+											  <source media="(min-width: 980px)" srcset="img/infograph-ico1_2medium.png">
+											  <img src="img/infograph-ico1_2small.png" srcset="img/infograph-ico1_2small.png" alt="">
+											</picture>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item-in">
+									<div class="slider__text slider__text_3">возможность одновременно разместить <span>60 000</span> тонн груза</div>
+									<div class="slider__text slider__text_4">объем хранения 32 000 паллет позволяет обработать <span>50</span> автотраков в сутки</div>
+									<div class="slider__pic slider__pic_big slider__pic_3">
+										<div class="slider__pic-in">
+											<picture>
+											  <source media="(min-width: 1760px)" srcset="img/infograph-ico2_1.png">
+											  <source media="(min-width: 980px)" srcset="img/infograph-ico2_1medium.png">
+											  <img src="img/infograph-ico2_1small.png" srcset="img/infograph-ico2_1small.png" alt="">
+											</picture>">
+										</div>
+									</div>
+									<div class="slider__pic slider__pic_4">
+										<div class="slider__pic-in">
+											<picture>
+											  <source media="(min-width: 1760px)" srcset="img/infograph-ico2_2.png">
+											  <source media="(min-width: 980px)" srcset="img/infograph-ico2_2medium.png">
+											  <img src="img/infograph-ico2_2small.png" srcset="img/infograph-ico2_2small.png" alt="">
+											</picture>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="slider__prev">
+							<picture>
+							  <source media="(min-width: 1760px)" srcset="img/prev-l.png">
+							  <img src="img/prev-m.png" srcset="img/prev-m.png" alt="">
+							</picture>
+						</button>
+						<button class="slider__next">
+							<picture>
+							  <source media="(min-width: 1760px)" srcset="img/next-l.png">
+							  <img src="img/next-m.png" srcset="img/next-m.png" alt="">
+							</picture>
+						</button>
+					</div>
+					<div class="slider__about">Компания "Девон-альянс" является крупнейшим поставщиком услуг складской логистики на территории Саратовской области</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<!-- partners -->
+		<div class="partners">
+			<div class="partners__in">
+				<div class="l-center">
+					<div class="partners__title">Наши партнеры</div>
+					<ul class="partners__list">
+						<li><img src="img/partner1.png" alt=""></li>
+						<li><img src="img/partner2.png" alt=""></li>
+						<li><img src="img/partner3.png" alt=""></li>
+						<li><img src="img/partner4.png" alt=""></li>
+						<li><img src="img/partner5.png" alt=""></li>
+						<li><img src="img/partner6.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<footer class="footer">
+			<div class="l-center">
+				<div class="footer__in">
+					<div class="footer__left">
+						<div class="footer__phone">Тел.:  (8452) 392 -777</div>
+						<div class="footer__mail">E-mail: <a href="mailto:info@devonlogist.com">info@devonlogist.com</a></div>
+						<!-- social -->
+						<div class="social">
+							<a class="social__tw" href="#"></a>
+							<a class="social__gp" href="#"></a>
+							<a class="social__fb" href="#"></a>
+						</div>
 					</div>
 					<!-- nav -->
-					<button class="nav-btn"></button>
-					<nav class="nav js-nav">
+					<nav class="nav">
 						<div class="nav__list">
-							<div class="nav__list-title is-dropdown"><a href="#">О компании</a></div>
+							<div class="nav__list-title"><a href="#">О компании</a></div>
 							<div class="nav__list-in">
 								<ul class="l-center">
 									<li><a href="#">Миссия и стратегия</a></li>
@@ -36,7 +241,7 @@
 							</div>
 						</div>
 						<div class="nav__list">
-							<div class="nav__list-title is-dropdown"><a href="#">Услуги</a></div>
+							<div class="nav__list-title"><a href="#">Услуги</a></div>
 							<div class="nav__list-in">
 								<ul class="l-center">
 									<li><a href="#">Логистика</a></li>
@@ -45,8 +250,8 @@
 								</ul>
 							</div>
 						</div>
-						<div class="nav__list is-active">
-							<div class="nav__list-title is-dropdown"><a href="#">Карьера</a></div>
+						<div class="nav__list">
+							<div class="nav__list-title"><a href="#">Карьера</a></div>
 							<div class="nav__list-in">
 								<ul class="l-center">
 									<li class="is-active"><a href="#">Вакансии</a></li>
@@ -58,212 +263,20 @@
 							<div class="nav__list-title"><a href="#">Контакты</a></div>
 						</div>
 					</nav>
-				</header>
-				<div class="main__in">
-					<a class="main__logo" href="#">
-						<picture>
-						  <source media="(min-width: 1760px)" srcset="img/logo-l.png">
-						  <source media="(min-width: 980px)" srcset="img/logo-m.png">
-						  <img src="img/logo-s.png" srcset="img/logo-s.png" alt="">
-						</picture>
-					</a>
-					<div class="main__serv">
-						<a class="main__serv-item" href="#">
-							<div class="main__serv-pic">
-								<picture>
-								  <source media="(min-width: 1760px)" srcset="img/main-serv1-l.jpg">
-								  <img src="img/main-serv1-m.jpg" srcset="img/main-serv1-m.jpg" alt="">
-								</picture>
-							</div>
-							<div class="main__serv-title">Логистика</div>
-						</a>
-						<a class="main__serv-item" href="#">
-							<div class="main__serv-pic">
-								<picture>
-								  <source media="(min-width: 1760px)" srcset="img/main-serv2-l.jpg">
-								  <img src="img/main-serv2-m.jpg" srcset="img/main-serv2-m.jpg" alt="">
-								</picture>
-							</div>
-							<div class="main__serv-title">девелопмент</div>
-						</a>
-						<a class="main__serv-item" href="#">
-							<div class="main__serv-pic">
-								<picture>
-								  <source media="(min-width: 1760px)" srcset="img/main-serv3-l.jpg">
-								  <img src="img/main-serv3-m.jpg" srcset="img/main-serv3-m.jpg" alt="">
-								</picture>
-							</div>
-							<div class="main__serv-title">управление недвижимостью</div>
-						</a>
+				</div>
+			</div>
+			<div class="footer__down">
+				<div class="l-center">
+					<div class="footer__copyright">© 2014 <span>Девон-альянс</span></div>
+					<div class="footer__created">
+						<span>Дизайн и разработка сайта</span>
+						<a calss="mediahero" href="#"></a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- center -->
-	<div class="l-center">
-		<!-- slider -->
-		<div class="slider">
-			<div class="slider__nav">
-				<div class="slider__nav-in">
-					<a href="#">площади и расположение</a>
-					<a href="#">тоннаж и обороты</a>
-				</div>
-			</div>
-			<div class="slider__center">
-				<div class="slider__list">
-					<div class="slider__in cycle-slideshow"
-						data-cycle-fx="scrollHorz"
-						data-cycle-timeout="0"
-						data-cycle-slides=".slider__item"
-						data-cycle-prev=".slider__prev"
-						data-cycle-next=".slider__next"
-						data-cycle-pager=".slider__nav-in"
-						data-cycle-pager-active-class="is-active"
-						data-cycle-pager-template="">
-						<div class="slider__item">
-							<div class="slider__item-in">
-								<div class="slider__text slider__text_1">49 000 м2 отапливаемых площадей общая площадь складских комплексов <span>70 000</span> м2</div>
-								<div class="slider__text slider__text_2"><span>7</span> км. от Саратова</div>
-								<div class="slider__pic slider__pic_big slider__pic_1">
-									<div class="slider__pic-in">
-										<picture>
-										  <source media="(min-width: 1760px)" srcset="img/infograph-ico1_1.png">
-										  <source media="(min-width: 980px)" srcset="img/infograph-ico1_1medium.png">
-										  <img src="img/infograph-ico1_1small.png" srcset="img/infograph-ico1_1small.png" alt="">
-										</picture>
-									</div>
-								</div>
-								<div class="slider__pic slider__pic_2">
-									<div class="slider__pic-in">
-										<picture>
-										  <source media="(min-width: 1760px)" srcset="img/infograph-ico1_2.png">
-										  <source media="(min-width: 980px)" srcset="img/infograph-ico1_2medium.png">
-										  <img src="img/infograph-ico1_2small.png" srcset="img/infograph-ico1_2small.png" alt="">
-										</picture>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="slider__item">
-							<div class="slider__item-in">
-								<div class="slider__text slider__text_3">возможность одновременно разместить <span>60 000</span> тонн груза</div>
-								<div class="slider__text slider__text_4">объем хранения 32 000 паллет позволяет обработать <span>50</span> автотраков в сутки</div>
-								<div class="slider__pic slider__pic_big slider__pic_3">
-									<div class="slider__pic-in">
-										<picture>
-										  <source media="(min-width: 1760px)" srcset="img/infograph-ico2_1.png">
-										  <source media="(min-width: 980px)" srcset="img/infograph-ico2_1medium.png">
-										  <img src="img/infograph-ico2_1small.png" srcset="img/infograph-ico2_1small.png" alt="">
-										</picture>">
-									</div>
-								</div>
-								<div class="slider__pic slider__pic_4">
-									<div class="slider__pic-in">
-										<picture>
-										  <source media="(min-width: 1760px)" srcset="img/infograph-ico2_2.png">
-										  <source media="(min-width: 980px)" srcset="img/infograph-ico2_2medium.png">
-										  <img src="img/infograph-ico2_2small.png" srcset="img/infograph-ico2_2small.png" alt="">
-										</picture>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<button class="slider__prev">
-						<picture>
-						  <source media="(min-width: 1760px)" srcset="img/prev-l.png">
-						  <img src="img/prev-m.png" srcset="img/prev-m.png" alt="">
-						</picture>
-					</button>
-					<button class="slider__next">
-						<picture>
-						  <source media="(min-width: 1760px)" srcset="img/next-l.png">
-						  <img src="img/next-m.png" srcset="img/next-m.png" alt="">
-						</picture>
-					</button>
-				</div>
-				<div class="slider__about">Компания "Девон-альянс" является крупнейшим поставщиком услуг складской логистики на территории Саратовской области</div>
-			</div>
-		</div>
-		<!-- partners -->
-		<div class="partners">
-			<div class="partners__title">Наши партнеры</div>
-			<ul class="partners__list">
-				<li><img src="img/partner1.png" alt=""></li>
-				<li><img src="img/partner2.png" alt=""></li>
-				<li><img src="img/partner3.png" alt=""></li>
-				<li><img src="img/partner4.png" alt=""></li>
-				<li><img src="img/partner5.png" alt=""></li>
-				<li><img src="img/partner6.png" alt=""></li>
-			</ul>
-		</div>
-	</div>
-	<!-- push -->
-	<div class="push"></div>
+		</footer>
+	</section>
 </div>
-<!-- footer -->
-<footer class="footer">
-	<div class="l-center">
-		<div class="footer__in">
-			<div class="footer__left">
-				<div class="footer__phone">Тел.:  (8452) 392 -777</div>
-				<div class="footer__mail">E-mail: <a href="mailto:info@devonlogist.com">info@devonlogist.com</a></div>
-				<!-- social -->
-				<div class="social">
-					<a class="social__tw" href="#"></a>
-					<a class="social__gp" href="#"></a>
-					<a class="social__fb" href="#"></a>
-				</div>
-			</div>
-			<!-- nav -->
-			<nav class="nav">
-				<div class="nav__list">
-					<div class="nav__list-title"><a href="#">О компании</a></div>
-					<div class="nav__list-in">
-						<ul class="l-center">
-							<li><a href="#">Миссия и стратегия</a></li>
-							<li><a href="#">Система качества</a></li>
-							<li><a href="#">Пресс-релизы</a></li>
-							<li><a href="#">Реквизиты</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="nav__list">
-					<div class="nav__list-title"><a href="#">Услуги</a></div>
-					<div class="nav__list-in">
-						<ul class="l-center">
-							<li><a href="#">Логистика</a></li>
-							<li><a href="#">Девелопмент</a></li>
-							<li><a href="#">Управление недвижимостью</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="nav__list">
-					<div class="nav__list-title"><a href="#">Карьера</a></div>
-					<div class="nav__list-in">
-						<ul class="l-center">
-							<li class="is-active"><a href="#">Вакансии</a></li>
-							<li><a href="#">Программы стажировки</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="nav__list">
-					<div class="nav__list-title"><a href="#">Контакты</a></div>
-				</div>
-			</nav>
-		</div>
-	</div>
-	<div class="footer__down">
-		<div class="l-center">
-			<div class="footer__copyright">© 2014 <span>Девон-альянс</span></div>
-			<div class="footer__created">
-				<span>Дизайн и разработка сайта</span>
-				<a calss="mediahero" href="#"></a>
-			</div>
-		</div>
-	</div>
-</footer>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
