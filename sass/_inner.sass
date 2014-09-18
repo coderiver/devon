@@ -101,35 +101,39 @@
 		.dev__el
 			display: none
 	.dev__list
-		margin-bottom: 150px 
+		margin-bottom: 150px
+		font-size: 0 
 		overflow: hidden
 		+p
 			margin-bottom: 65px
 		+m
 			margin-bottom: 15px
+			overflow: visible
 	.dev__list-in
 		margin-right: -20px
 		overflow: hidden
+		+r15
+			margin: 0
+			text-align: center
 		+m
 			margin: 0
-			border: 1px solid #a0a0a0
-			border-width: 1px 0 0 1px
+			text-align: left
+			overflow: visible
 		.dev__item
-			float: left
+			display: inline-block
 			width: 444px 
 			height: 228px
 			margin: 0 10px 10px 0
 			border: 1px solid #a0a0a0
 			cursor: pointer
-			+p
-				margin: 0 5px 5px 0
+			vertical-align: top
+			+r15
+				margin: 0 5px 10px
+				text-align: left
 			+m	
 				width: 143px
 				height: auto
-				margin: 0
-				border-width: 0 1px 1px 0
-				&:nth-child(2n)
-					width: 144px
+				margin: 0 -1px -1px 0
 		.dev__pic
 			float: left
 			font-size: 0
@@ -240,18 +244,18 @@
 		font-size: 0
 		overflow: hidden
 	.team__list-in
-		margin-right: -20px
+		margin: 0 -1%
 		overflow: hidden
 	.team__item
 		float: left
-		width: 330px
-		margin: 0 15px 45px 0
-		+p
-			width: 217px
-			margin: 0 10px 35px 0
+		width: 23%
+		margin: 0 1% 45px
 		+m
-			width: 100%
-			margin: 0 0 25px
+			width: 48%
+		+r6
+			float: none
+			width: 290px
+			margin: 0 auto 25px
 	.team__btn
 		position: absolute
 		top: 14px
@@ -284,11 +288,10 @@
 			display: none
 	.team__pic
 		position: relative
-		width: 330px
+		width: 100%
 		height: 200px
 		overflow: hidden
 		+p
-			width: 217px
 			height: 180px
 	.team__pic-in
 		position: absolute
@@ -407,20 +410,18 @@
 	.logist__left,
 	.logist__right
 		position: relative	
-		width: 580px
-		height: 626px
+		width: 48%
 		border-radius: 10px 
 		overflow: hidden
-		+p
-			width: 390px
-			height: 421px 
-		+m
+		+r6
 			width: 290px
-			height: 313px
+			margin: 0 auto
 	.logist__left
 		float: left
-		+m
-			margin-bottom: 20px
+		margin-right: 2%
+		+r6
+			float: none
+			margin: 0 auto 20px 
 		.logist__pic
 			left: auto
 			right: 0
@@ -431,32 +432,33 @@
 				+s(logist-arr-right)
 	.logist__right
 		float: right
+		margin-left: 2%
+		+r6
+			float: none
+			margin: 0 auto 20px 
 		.logist__more
 			i
 				+s(logist-arr-left)
 	.logist__pic
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
+		position: relative
 		border-radius: 10px
 		cursor: pointer
-		+tr(width .5s)
+		+tr(all .5s)
+		visibility: visible
 		overflow: hidden 
+		z-index: 4
+		img
+			display: block
+			width: 100%
 		&.is-moved
-			width: 0
+			opacity: 0 
+			visibility: hidden
 	.logist__type
 		position: absolute
 		top: 40px
 		left: 25px
 		right: 25px
-		width: 530px
 		color: #fff
-		+p
-			width: 340px 
-		+m
-			width: 240px
 	.logist__type-in
 		margin-bottom: 50px
 		font-size: 24px
@@ -475,6 +477,14 @@
 				font-size: 18px
 			+m
 				font-size: 16px
+	.logist__accord
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		overflow: auto
+		z-index: 2 
 	.logist__title
 		position: relative
 		padding: 8px 48px 8px 20px
@@ -544,10 +554,14 @@
 	height: 8800px
 	padding-top: 70px
 	margin-bottom: 100px
-	+p
+	overflow: hidden
+	+r17
 		height: 8660px
 	+m
 		display: none
+	.l-center
+		+r17
+			max-width: 1366px
 	&.sl-slide-1
 		.sl__item_2
 			>picture
@@ -701,12 +715,12 @@
 		padding-top: 10px
 		background: #fff
 		box-sizing: border-box
-		+p
+		+r17
 			height: 660px
 	.sl__in
 		position: relative
 		height: 720px
-		+p
+		+r17
 			height: 560px
 	.sl__list
 		position: absolute
@@ -714,7 +728,7 @@
 		bottom: 0
 		left: 0
 		top: 0
-		+p
+		+r17
 			right: 130px
 	.sl__item
 		position: absolute
@@ -737,7 +751,7 @@
 		padding-left: 20px
 		border-left: 2px solid $red 
 		font-size: 18px
-		+p
+		+r17
 			top: 85px
 			width: 110px
 			min-height: 0
@@ -765,7 +779,7 @@
 			left: auto
 			right: -82px
 			bottom: 0
-			+p
+			+r17
 				right: -54px
 		.sl__point-text
 			margin: 0
@@ -774,7 +788,7 @@
 		left: -83px
 		bottom: -83px
 		font-size: 0
-		+p
+		+r17
 			left: -54px
 			bottom: -54px
 	.sl__point-text
@@ -782,14 +796,14 @@
 		padding: 0 10px 10px
 		border-bottom: 1px solid $red 
 		font-size: 16px
-		+p
+		+r17
 			font-size: 14px
 		span
 			display: inline-block
 			font-size: 48px
 			line-height: 1
 			vertical-align: top
-			+p
+			+r17
 				font-size: 32px
 	.sl__item_1
 		top: 0
@@ -806,19 +820,19 @@
 			visibility: visible
 			opacity: 1
 			+transform(translateX(0px))
-			+p
+			+r17
 				top: 10px
 				left: 400px
 	.sl__item_2, .sl__item_3
 		.sl__point
 			right: 445px
 			bottom: 15px
-			+p
+			+r17
 				right: 294px
 	.sl__item_3
 		.sl__point-text
 			width: 250px
-			+p
+			+r17
 				width: 220px
 		>picture
 			+transform(translateX(100px))
@@ -826,17 +840,17 @@
 		.sl__point
 			right: 535px
 			bottom: 0px
-			+p
+			+r17
 				right: 347px
 		.sl__point-text
 			width: 270px
-			+p
+			+r17
 				width: 250px
 	.sl__item_5, .sl__item_6
 		.sl__point
 			right: 540px
 			bottom: 10px
-			+p
+			+r17
 				right: 330px
 		.sl__point-text
 			width: 300px
@@ -845,7 +859,7 @@
 			+transform(translateY(100px))
 	.sl__item_7, .sl__item_8
 		bottom: 60px
-		+p
+		+r17
 			right: -50px
 		>picture
 			position: relative
@@ -853,12 +867,12 @@
 			right: 610px
 			bottom: -50px
 			z-index: 6 
-			+p
+			+r17
 				right: 454px
 				bottom: -41px
 	.sl__item_7
 		width: 547px
-		+p
+		+r17
 			width: 411px
 		>picture
 			position: relative
@@ -871,7 +885,7 @@
 			right: -85px
 			bottom: -10px
 			+transform(translateX(100px))
-			+p
+			+r17
 				right: 0
 				bottom: -14px
 		
@@ -1038,17 +1052,19 @@
 		font-size: 16px
 	.mission__row
 		display: table-row
-		+p
+		+m
 			display: block
 	.mission__cell
 		display: table-cell
 		padding: 0 50px 20px 0
-		+p
+		vertical-align: top
+		+m
 			display: block
-		&:first-child
-			color: $red 
 		p
 			margin-bottom: 10px
+	.mission__title	
+		margin-bottom: 5px
+		color: $red 
 	.mission__organize
 		height: 10px
 		margin-bottom: 30px
@@ -1097,13 +1113,15 @@
 	+clr
 	.quality__left
 		float: left
-		margin-right: 100px
+		margin: 0 100px 0 -150px
 		font-size: 0
+		+r17
+			margin: 0 100px 0 0
 		+p
 			float: none
 			margin: 0 0 50px
 			text-align: center
-		+m
+		+r7
 			display: none
 	>.quality__list,
 	.quality__center
@@ -1114,6 +1132,8 @@
 		display: inline-block
 		font-size: 14px
 		color: #404040 
+		+p
+			text-align: left
 		li
 			position: relative
 			padding-left: 8px
@@ -1243,6 +1263,7 @@
 		margin: 5px 0
 		font-size: 16px
 	.vacancy__foot
+		max-width: 380px
 		+clr
 	.vacancy__date
 		position: relative
@@ -1274,6 +1295,8 @@
 
 .form
 	max-width: 600px
+	+m
+		width: 290px
 	.form__title
 		margin-bottom: 25px
 		+m
@@ -1303,7 +1326,9 @@
 			margin: 0 0 5px
 			font-size: 16px
 	.field__in
-		max-width: 400px
+		width: 400px
+		+m
+			width: 290px
 		>input, >textarea
 			width: 100%
 			border: 1px solid #a0a0a0

@@ -57,8 +57,20 @@ $red: #e31e24
 =f
 	font-family: "Lato", Arial, sans-serif
 
+=r17
+	+r(1760)
+		@content
+=r15
+	+r(1500)
+		@content
 =p
 	+r(1366)
+		@content
+=r7
+	+r(700)
+		@content
+=r6
+	+r(600)
 		@content
 =m
 	+r(980)
@@ -67,6 +79,19 @@ $red: #e31e24
 =header_fixed
 	@media only screen and (min-width: "980px")
 		@content
+
+html
+	&.no-desktop
+		.main, .slider, .partners, .footer
+			position: relative
+			top: auto
+			left: auto
+			right: auto
+			bottom: auto
+		.main
+			min-height: 900px
+		.slider, .partners
+			padding: 15px
 
 body
 	+f
@@ -98,6 +123,7 @@ h1, h2, h3, h4, h5, h6
 .fullpage
 	.section
 		position: relative
+		overflow: hidden
 	.footer
 		position: absolute
 		left: 0
@@ -115,10 +141,11 @@ h1, h2, h3, h4, h5, h6
   
 .header
 	position: relative
-	min-height: 156px
+	min-height: 55px
 	margin-bottom: 40px
 	z-index: 199 
 	+m
+		min-height: 0
 		margin-bottom: 20px
 	&.is-fixed
 		+header_fixed
@@ -139,6 +166,9 @@ h1, h2, h3, h4, h5, h6
 			.nav__list
 				position: static
 				width: auto
+				height: 55px
+				min-height: 0
+				padding: 0 15px
 				margin: 0
 				&:after
 					display: none
@@ -209,38 +239,39 @@ h1, h2, h3, h4, h5, h6
 		top: 10px
 	.nav
 		margin: 0
-		padding-top: 25px
+		padding-top: 20px
+		+header_fixed
+			display: block !important
 		+m
-			padding: 0
-	.nav__list
-		&.is-active
-			.nav__list-title
-				position: relative
-				&:before
-					content: ""
-					position: absolute
-					top: -25px
-					left: -15px
-					right: -15px
-					height: 6px 
-					background: $red 
-					+m
-						display: none
-		li
-			&.is-active
-				a
-					position: relative
-					color: #656363 
-
-.nav-btn
-	display: none
-	position: absolute
-	top: 18px
-	right: 15px
-	+s(menu-ico)
-	z-index: 4 
-	+m
-		display: block
+			display: none
+			position: absolute
+			top: 0
+			right: -15px
+			width: 210px
+			margin: 0
+			padding: 20px 15px 50px 20px
+			background: #101010 
+			z-index: 2  
+		.nav__list
+			+m
+				float: none
+				width: 100%
+				padding: 0
+				margin-bottom: 10px
+				border: none
+			li
+				&.is-active
+					a
+						position: relative
+						color: #656363 
+				+m
+					margin-left: 25px
+					padding: 5px 0 5px 10px
+					border-left: 1px solid $red
+					&:first-child
+						margin-left: 25px
+					a
+						font-size: 18px
 
 .main
 	position: absolute
@@ -258,7 +289,9 @@ h1, h2, h3, h4, h5, h6
 		bottom: 0
 		padding-top: 100px
 		z-index: 2
-		+vertical 
+		+vertical
+		+m
+			padding-top: 50px
 	.main__center-in
 		display: inline-block
 		width: 100%
@@ -277,6 +310,8 @@ h1, h2, h3, h4, h5, h6
 		z-index: 2 
 		+p
 			left: 15px
+		+m
+			display: none
 		img
 			max-width: 100%
 			max-height: 100%
@@ -284,15 +319,24 @@ h1, h2, h3, h4, h5, h6
 		position: relative
 		float: right
 		width: 75%
+		text-align: right
+		font-size: 0
 		z-index: 4 
 		+p
 			width: 80%
+		+m
+			float: none
+			width: 230px
+			margin: 0 auto
 	.main__serv-item
-		float: left
+		display: inline-block
 		width: 31%
 		margin-left: 2%
 		background: #fff
 		vertical-align: top
+		+m
+			width: 100%
+			margin: 0 0 10px
 	.main__serv-pic
 		position: relative
 		img
@@ -326,16 +370,20 @@ h1, h2, h3, h4, h5, h6
 		&.is-fixed
 			.header__wrap
 				background: #101010 
-			.nav
-				padding-top: 0
 			.phone
 				margin: 10px 0 0 50px
+				+m
+					margin: 0
+			.nav
+				padding-top: 0
 		.header__wrap
 			background: none
-		.nav
-			padding-top: 65px
 		.phone
 			margin: 60px 0 0 0 
+			+m
+				margin: 0
+		.nav
+			padding-top: 65px	
 
 .phone
 	float: left
@@ -363,27 +411,36 @@ h1, h2, h3, h4, h5, h6
 		+m
 			+s(marker-s)
 
-.nav
-	float: right
-	margin-top: 8px
-	color: #c5c5c5
-	overflow: hidden
-	+header_fixed
-		display: block !important
+.nav-line
+	position: absolute
+	top: 0
+	left: 0
+	width: 0
+	height: 6px
+	background: $red 
+	+transition(width .4s, left .4s)
 	+m
 		display: none
-		position: absolute
-		top: 0
-		right: -15px
-		width: 210px
-		margin: 0
-		padding: 20px 15px 50px 20px
-		background: #101010 
-		z-index: 2  
+	
+.nav-btn
+	display: none
+	position: absolute
+	top: 18px
+	right: 15px
+	+s(menu-ico)
+	z-index: 4 
+	+m
+		display: block
+
+.nav
+	float: right
+	color: #c5c5c5
+	overflow: hidden
 	.nav__list
 		position: relative
 		float: left
-		padding: 0 15px
+		min-height: 100px
+		padding: 0 15px 5px
 		vertical-align: top 
 		+p
 			width: 120px
@@ -392,19 +449,12 @@ h1, h2, h3, h4, h5, h6
 			&:last-child
 				padding: 0 0 0 15px
 		+m
-			display: block
-			padding: 0
-			margin-bottom: 10px
-			border: none
-			li
-				margin-left: 25px
-				padding: 5px 0 5px 10px
-				border-left: 1px solid $red
-				a
-					font-size: 18px
+			min-height: 0 
 		li
 			margin-top: 5px
 			line-height: 0.9
+			+m
+				margin: 0
 			&:first-child
 				margin: 0
 		&:after
@@ -434,6 +484,11 @@ h1, h2, h3, h4, h5, h6
 			font-size: 18px
 
 .slider
+	position: absolute
+	top: 55px
+	left: 0
+	right: 0
+	bottom: 0
 	+vertical
 	.slider__vertical
 		display: inline-block
@@ -483,10 +538,13 @@ h1, h2, h3, h4, h5, h6
 		margin: 0 auto
 		+p
 			max-width: 850px
+		+m
+			max-width: 320px
 	.slider__in
 		margin-bottom: 15px
 		padding-bottom: 60px
 		border-bottom: 2px solid #a0a0a0
+		text-align: left
 		+m	
 			padding-bottom: 40px
 			margin-bottom: 10px 
@@ -508,11 +566,11 @@ h1, h2, h3, h4, h5, h6
 		+m
 			display: none
 	.slider__prev
-		left: -170px
+		left: -100px
 		+p
 			left: -30px
 	.slider__next
-		right: -170px
+		right: -100px
 		+p
 			right: -30px
 	.slider__item
@@ -793,10 +851,8 @@ h1, h2, h3, h4, h5, h6
 			bottom: 60px
 			left: 15px
 	.nav
-		margin: 0
 		+m
 			display: none
-
 
 .social
 	font-size: 0
