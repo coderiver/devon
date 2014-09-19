@@ -1156,24 +1156,56 @@
 
 .press
 	.press__item
+		position: relative
 		margin-bottom: 70px
-		+clr
 		+p
 			margin-bottom: 50px
 	.press__pic
-		float: left
-		margin-right: 100px
 		font-size: 0
 		img
 			max-width: 100%
-		+p
-			margin-right: 50px
-		+m
-			margin: 0 0 10px
+		+r7
+			margin: 0 0 20px
 	.press__info
-		display: table
-	.press__title
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 610px
+		overflow: hidden
+		+r17
+			left: 500px
+		+p
+			left: 450px
+		+m
+			left: 320px
+		+r7
+			position: relative
+			left: 0
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 10px
+			+g(rgba(255,255,255,0), rgba(255,255,255,1))
+	.press__head
 		margin-bottom: 5px
+		+clr
+	.press__date
+		float: left
+		padding-right: 10px
+		margin-right: 30px
+		border-right: 2px solid #969595
+		color: #969595 
+		font-size: 28px
+		text-align: right
+		span
+			display: block
+			font-size: 16px
+	.press__title
+		display: table
 		font-size: 22px
 		text-transform: uppercase
 		color: $red 
@@ -1181,9 +1213,6 @@
 			font-size: 16px
 		a
 			color: $red
-	.press__date
-		margin-bottom: 20px
-		color: #555 
 	.press__text
 		+m
 			font-size: 16px
