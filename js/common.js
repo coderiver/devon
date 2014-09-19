@@ -61,7 +61,7 @@ head.ready(function() {
 	// team
 	$('.js-team').on('click', function () {
 		$(this).toggleClass('is-active');
-		$(this).next().toggle();
+		$(this).next().toggle(200);
 	});
 
 	// threed	
@@ -109,7 +109,7 @@ head.ready(function() {
 	  	$(this).addClass('is-active');
 	  	item.hide();
 	  	var index = $(this).index();
-	  	item.eq(index).fadeIn();
+	  	item.eq(index).show();
 	  	return false;
 	  }).first().trigger('click');
 	};
@@ -125,14 +125,40 @@ head.ready(function() {
 			if (sl_top <= scroll_top) {
 				sl.addClass('is-fixed');
 				var koef = (scroll_top - sl_top)/1000;
-				koef = Math.round(koef);
-				if (koef > 0) {
+				function sl_remove_class () {
 					sl.removeClass('sl-slide-1 sl-slide-2 sl-slide-3 sl-slide-4 sl-slide-5 sl-slide-6 sl-slide-7');
-					sl.addClass('sl-slide-'+koef);
-				};
-				if (koef == 8) {
+				}
+				if (koef > 0) {
+					sl_remove_class();
+					sl.addClass('sl-slide-1');
+				}
+				if (koef > 1) {
+					sl_remove_class();
+					sl.addClass('sl-slide-2');
+				}
+				if (koef > 2) {
+					sl_remove_class();
+					sl.addClass('sl-slide-3');
+				}
+				if (koef > 3) {
+					sl_remove_class();
+					sl.addClass('sl-slide-4');
+				}
+				if (koef > 4) {
+					sl_remove_class();
+					sl.addClass('sl-slide-5');
+				}
+				if (koef > 5) {
+					sl_remove_class();
+					sl.addClass('sl-slide-6');
+				}
+				if (koef > 6) {
+					sl_remove_class();
 					sl.addClass('sl-slide-7');
-				};
+				}
+				if (koef > 7) {
+					sl.addClass('sl-slide-8');
+				}
 			}
 			else {
 				sl.removeClass('sl-slide-1 sl-slide-2 sl-slide-3 sl-slide-4 sl-slide-5 sl-slide-6 sl-slide-7 sl-slide-8');

@@ -115,10 +115,11 @@
 		+r15
 			margin: 0
 			text-align: center
-		+m
+		+r6
 			margin: 0
 			text-align: left
 			overflow: visible
+			text-align: center
 		.dev__item
 			display: inline-block
 			width: 444px 
@@ -130,22 +131,22 @@
 			+r15
 				margin: 0 5px 10px
 				text-align: left
-			+m	
+			+r6
 				width: 143px
 				height: auto
 				margin: 0 -1px -1px 0
 		.dev__pic
 			float: left
 			font-size: 0
-			+m
+			+r6
 				display: none
 		.dev__type
 			position: relative
 			padding: 70px 25px 0
-			font-size: 18px
+			font-size: 17px
 			color: #262626 
 			overflow: hidden
-			+m
+			+r6
 				display: table-cell
 				width: 143px
 				height: 90px
@@ -160,7 +161,7 @@
 				width: 70px
 				height: 2px
 				background: $red
-				+m
+				+r6
 					display: none 
 	.dev__info
 		margin-bottom: 70px
@@ -168,12 +169,12 @@
 			margin-bottom: 85px 
 			+p
 				margin-bottom: 40px
-			+m
+			+r6
 				margin-bottom: 20px
 		.dev__pic, .dev__in
 			display: table-cell
 			vertical-align: top
-			+m
+			+r6
 				display: block
 		.dev__pic
 			width: 446px
@@ -182,15 +183,21 @@
 			+p
 				width: 355px
 				padding-right: 45px
-			+m
+			+r8
+				width: 200px
+				padding-right: 25px
+			+r6
 				float: left
 				width: 115px
 				padding: 0
-				margin: 0 10px 10px -15px 
+				margin: 0 10px 10px -15px
+			img
+				display: block
+				width: 100% 
 		.dev__in
 			padding-bottom: 40px
 			border-bottom: 1px solid #a0a0a0 
-			+m
+			+r6
 				padding: 0
 				border: none
 		.dev__title
@@ -200,7 +207,7 @@
 			font-size: 24px 
 			+p
 				padding-top: 60px
-			+m
+			+r6
 				min-height: 95px
 				padding-top: 20px
 				margin-bottom: 10px
@@ -213,15 +220,15 @@
 				width: 70px
 				height: 2px
 				background: $red 
-				+m
+				+r6
 					top: 0
 					left: 110px
 					right: 0
 					width: auto
 		.dev__content
-			font-size: 18px
+			font-size: 17px
 			line-height: 1.3
-			+m
+			+r6
 				font-size: 16px
 			p, ul
 				margin-bottom: 10px 
@@ -238,7 +245,7 @@
 
 .team
 	margin-bottom: 100px
-	+m
+	+r6
 		margin-bottom: 50px
 	.team__list
 		font-size: 0
@@ -423,8 +430,10 @@
 			float: none
 			margin: 0 auto 20px 
 		.logist__pic
-			left: auto
 			right: 0
+			+tr(right .4s)
+			&.is-moved
+				right: -100%
 		.logist__type
 			text-align: right
 		.logist__more
@@ -436,23 +445,27 @@
 		+r6
 			float: none
 			margin: 0 auto 20px 
+		.logist__pic
+			left: 0
+			+tr(left .4s)
+			&.is-moved
+				left: -100%
 		.logist__more
 			i
 				+s(logist-arr-left)
 	.logist__pic
-		position: relative
+		position: absolute
+		top: 0
+		width: 100%
+		height: 100%
 		border-radius: 10px
 		cursor: pointer
-		+tr(all .5s)
-		visibility: visible
+		+tr(left .4s)
 		overflow: hidden 
 		z-index: 4
 		img
 			display: block
 			width: 100%
-		&.is-moved
-			opacity: 0 
-			visibility: hidden
 	.logist__type
 		position: absolute
 		top: 40px
@@ -502,22 +515,20 @@
 			top: 13px
 			right: 19px
 			+s(arr-left-white) 
+			+m
+				top: 8px
 	.logist__text
 		display: none
 		padding: 8px 20px
-		font-size: 18px
-		+p
-			font-size: 16px
+		font-size: 17px
 		+m
 			font-size: 14px
 	.logist__category
 		position: relative
 		padding: 8px 48px 8px 20px
 		margin-bottom: 1px
-		font-size: 24px
+		font-size: 20px
 		cursor: pointer
-		+p
-			font-size: 20px
 		+m
 			font-size: 16px
 		&.is-active
@@ -548,6 +559,11 @@
 			+s(arr-right-white) 
 	.logist__category_dark
 		background: #e7e5e6 
+	.logist__size
+		visibility: hidden
+		img
+			display: block
+			width: 100%
 
 .sl
 	position: relative
@@ -750,13 +766,14 @@
 		min-height: 265px
 		padding-left: 20px
 		border-left: 2px solid $red 
-		font-size: 18px
+		font-size: 17px
 		+r17
 			top: 85px
 			width: 110px
 			min-height: 0
 			font-size: 14px
 		li
+			margin-bottom: 3px
 			visibility: hidden
 			opacity: 0
 			+transform(translateX(50px))
@@ -902,6 +919,8 @@
 			width: 260px
 			margin: 0
 		+m
+			width: 150px
+		+r6
 			float: none
 			width: auto
 			margin: 0 -5px 20px 0
@@ -918,7 +937,7 @@
 				width: 115px
 				height: 100px
 				margin: 0 2px 2px 0
-			+m
+			+r6
 				width: 69px
 				height: 62px
 				margin: 0 1px 0 0
@@ -933,8 +952,8 @@
 				+gray
 	.history__text
 		display: table
-		font-size: 18px
-		+m
+		font-size: 17px
+		+r6
 			font-size: 16px
 		li
 			display: none
@@ -977,17 +996,16 @@
 
 .inner
 	margin-bottom: 150px
+	font-size: 17px
 	+p
 		margin-bottom: 100px
 	+m
 		margin-bottom: 50px
 	.inner__title
 		margin-bottom: 30px 
-		font-size: 36px
+		font-size: 29px
 		text-transform: uppercase
 		line-height: 1.1
-		+p
-			font-size: 32px
 		+m
 			margin-bottom: 10px
 			font-size: 22px
@@ -1006,6 +1024,12 @@
 		display: table
 		+p
 			display: block
+		.content
+			blockquote
+				p
+					margin-bottom: 10px
+				img
+					vertical-align: middle
 
 .content
 	+m
@@ -1020,14 +1044,12 @@
 		&:hover
 			text-decoration: none 
 	blockquote
-		max-width: 60%
+		max-width: 80%
 		margin-left: 40px
 		padding-left: 20px
 		border-left: 5px solid $red
-		+p
-			max-width: 80%
 		+m
-			max-width: 100
+			max-width: 100%
 			padding-left: 10px
 			margin-left: 0 
 	ul
@@ -1047,19 +1069,29 @@
 
 .mission
 	display: table
+	table-layout: fixed
 	+m
 		display: block
 		font-size: 16px
 	.mission__row
-		display: table-row
+		+clr
 		+m
 			display: block
 	.mission__cell
 		display: table-cell
 		padding: 0 50px 20px 0
 		vertical-align: top
+		+p
+			display: block
+		&:first-child
+			width: 400px
+			+p
+				width: auto
 		+m
 			display: block
+		img
+			display: block
+			max-width: 100%
 		p
 			margin-bottom: 10px
 	.mission__title	
@@ -1085,6 +1117,7 @@
 	.goal__cell
 		display: table-cell
 		vertical-align: bottom
+		text-align: center
 		+m
 			display: block
 	.goal__title
@@ -1106,6 +1139,7 @@
 			+m
 				margin-bottom: 10px
 	.goal__pic
+		display: inline-block
 		font-size: 0
 		text-align: center
 
