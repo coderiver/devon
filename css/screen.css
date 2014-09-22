@@ -20,9 +20,18 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: Lato Regular; src: url("fonts/lato-regular.eot"); src: url("fonts/lato-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lato-regular.woff") format("woff"), url("fonts/lato-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
+html.lt-1680 .l-center { padding: 0 15px; }
+html.lt-1680 .header .phone { margin: 93px 0 0 10px; }
+html.lt-1680 .main__logo { left: 15px; }
+html.lt-1680 .main__serv { width: 80%; }
+html.lt-1680 .main__serv-title span { font-size: 16px; }
+html.lt-1680 .phone .phone__in { font-size: 20px; }
+html.lt-1680 .nav__list { width: 120px; }
+html.lt-1680 .nav__list:first-child { width: auto; }
 html.no-desktop .main, html.no-desktop .slider, html.no-desktop .partners, html.no-desktop .footer { position: relative; top: auto; left: auto; right: auto; bottom: auto; }
 html.no-desktop .main { min-height: 900px; }
 html.no-desktop .slider, html.no-desktop .partners { padding: 15px; }
+html.ie8 { min-width: 980px; overflow: auto !important; }
 
 body { min-width: 320px; font-family: "Lato Regular", Arial, sans-serif; font-size: 20px; line-height: 1.2; color: #333333; }
 body.main-page { font-size: 20px !important; }
@@ -97,14 +106,14 @@ h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 .main .main__logo { position: absolute; top: 0; left: 30px; bottom: 0; width: 220px; font-size: 0; text-align: left; z-index: 2; }
 @media only screen and (max-width: 1366px) { .main .main__logo { left: 15px; } }
 @media only screen and (max-width: 980px) { .main .main__logo { display: none; } }
-.main .main__logo img { max-width: 100%; max-height: 100%; }
+.main .main__logo img { max-width: 100%; max-height: 100%; height: 100%; }
 .main .main__serv { position: relative; float: right; width: 75%; text-align: right; font-size: 0; z-index: 4; }
 @media only screen and (max-width: 1366px) { .main .main__serv { width: 80%; } }
 @media only screen and (max-width: 980px) { .main .main__serv { float: none; width: 230px; margin: 0 auto; } }
 .main .main__serv-item { display: inline-block; width: 31%; margin-left: 2%; background: white; vertical-align: top; }
 @media only screen and (max-width: 980px) { .main .main__serv-item { width: 100%; margin: 0 0 10px; } }
 .main .main__serv-pic { position: relative; }
-.main .main__serv-pic img { display: block; max-width: 100%; }
+.main .main__serv-pic img { display: block; width: 100%; max-width: 100%; }
 .main .main__serv-pic:after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: rgba(0, 0, 0, 0.15); }
 .main .main__serv-title { height: 70px; padding: 0 20px; text-transform: uppercase; color: #333333; text-align: center; font-size: 0; }
 .main .main__serv-title:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
