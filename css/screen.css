@@ -20,14 +20,14 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: Lato Regular; src: url("fonts/lato-regular.eot"); src: url("fonts/lato-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lato-regular.woff") format("woff"), url("fonts/lato-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-html.lt-1680 .l-center { padding: 0 15px; }
-html.lt-1680 .header .phone { margin: 93px 0 0 10px; }
-html.lt-1680 .main__logo { left: 15px; }
-html.lt-1680 .main__serv { width: 80%; }
-html.lt-1680 .main__serv-title span { font-size: 16px; }
-html.lt-1680 .phone .phone__in { font-size: 20px; }
-html.lt-1680 .nav__list { width: 120px; }
-html.lt-1680 .nav__list:first-child { width: auto; }
+html.ie8.lt-1680 .l-center { padding: 0 15px; }
+html.ie8.lt-1680 .header .phone { margin: 93px 0 0 10px; }
+html.ie8.lt-1680 .main__logo { left: 15px; }
+html.ie8.lt-1680 .main__serv { width: 80%; }
+html.ie8.lt-1680 .main__serv-title span { font-size: 16px; }
+html.ie8.lt-1680 .phone .phone__in { font-size: 20px; }
+html.ie8.lt-1680 .nav__list { width: 120px; }
+html.ie8.lt-1680 .nav__list:first-child { width: auto; }
 html.no-desktop .main, html.no-desktop .slider, html.no-desktop .partners, html.no-desktop .footer { position: relative; top: auto; left: auto; right: auto; bottom: auto; }
 html.no-desktop .main { min-height: 900px; }
 html.no-desktop .slider, html.no-desktop .partners { padding: 15px; }

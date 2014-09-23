@@ -89,27 +89,28 @@ $red: #e31e24
 		@content
 
 html
-	&.lt-1680
-		.l-center
-			padding: 0 15px
-		.header
+	&.ie8
+		&.lt-1680
+			.l-center
+				padding: 0 15px
+			.header
+				.phone
+					margin: 93px 0 0 10px
+			.main__logo
+				left: 15px
+			.main__serv
+				width: 80%
+			.main__serv-title
+				span
+					font-size: 16px
 			.phone
-				margin: 93px 0 0 10px
-		.main__logo
-			left: 15px
-		.main__serv
-			width: 80%
-		.main__serv-title
-			span
-				font-size: 16px
-		.phone
-			.phone__in	
-				font-size: 20px
-		.nav__list
-			width: 120px
-			&:first-child
-				width: auto
-	&.lt-1440
+				.phone__in	
+					font-size: 20px
+			.nav__list
+				width: 120px
+				&:first-child
+					width: auto
+		&.lt-1440
 
 	&.no-desktop
 		.main, .slider, .partners, .footer
