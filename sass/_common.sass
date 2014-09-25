@@ -23,9 +23,9 @@
 //     img
 //			@extend %gray
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
+//     +r(980)in-screen(320)
 //			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+// +r(980)ax-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
 //
 // ## use cycles
 //     @for $i from 1 through 3
@@ -41,9 +41,9 @@
 // 	font-family: "book", Arial, sans-serif 
 // insert pics into css
 // div
-// 	+pic("blabla.png")
+// 	+r(1366)ic("blabla.png")
 // span
-// 	+png(blabla)
+// 	+r(1366)ng(blabla)
 // p
 // 	+jpg(bla)
 
@@ -53,43 +53,16 @@
 
 $red: #e31e24
 
-=r17
-	+r(1760)
-		@content
-=r15
-	+r(1500)
-		@content
-=p
-	+r(1366)
-		@content
-=r12
-	+r(1200)
-		@content
-=r11
-	+r(1100)
-		@content
-=r115
-	+r(1150)
-		@content
-=r8
-	+r(800)
-		@content
-=r7
-	+r(700)
-		@content
-=r6
-	+r(600)
-		@content
-=m
-	+r(980)
-		@content
-
 =header_fixed
 	@media only screen and (min-width: "980px")
 		@content
 
 html
 	&.ie8
+		min-width: 980px 
+		overflow: auto !important
+		.sl
+			display: none
 		&.lt-1680
 			.l-center
 				padding: 0 15px
@@ -110,7 +83,124 @@ html
 				width: 120px
 				&:first-child
 					width: auto
+			.nav__list-in
+				.l-center
+					padding: 0
+			.slider
+				.slider__prev
+					left: -50px
+				.slider__next
+					right: -50px
+			.dev
+				.dev__list
+					margin-bottom: 65px
+				.dev__list-in
+					margin: 0
+					text-align: center
+					.dev__item
+						margin: 0 5px 10px
+						text-align: left
+			.press
+				.press__info
+					left: 500px
 		&.lt-1440
+			.footer
+				.nav
+					display: none
+			.slider
+				.slider__nav-in
+					a
+						font-size: 16px
+				.slider__center
+					margin: 0 50px 
+				.slider__about
+					font-size: 24px
+				.slider__prev
+					left: -30px
+				.slider__next
+					right: -30px
+				.slider__item-in
+					height: 430px
+				.slider__pic-in
+					width: 172px
+					height: 172px
+					&:after
+						width: 116px
+						height: 116px
+						margin: -63px 0 0 -63px
+				.slider__pic_big
+					.slider__pic-in
+						width: 334px
+						height: 334px
+						&:after
+							width: 224px
+							height: 224px
+							margin: -117px 0 0 -117px 
+				.slider__text
+					position: absolute
+					font-size: 20px
+					span
+						display: inline-block
+						font-size: 90px 
+						vertical-align: top
+						line-height: 0.9
+						letter-spacing: -2px 
+				.slider__text_1
+					top: 20px
+					left: 30px
+				.slider__text_2
+					left: 270px
+				.slider__text_3
+					top: 30px
+				.slider__text_4
+					right: 220px
+				.slider__pic_1
+					right: 30px
+				.slider__pic_2
+					left: 30px
+				.slider__pic_3
+					left: 30px
+				.slider__pic_4
+					right: 30px
+			.partners
+				.partners__title
+					margin-bottom: 40px
+					padding-bottom: 10px
+					font-size: 26px
+				.partners__list
+					li
+						height: 104px
+			.breadcrumbs
+				margin-bottom: 50px
+			.title
+				&.title_logistic
+					margin-bottom: 40px
+				.title__in
+					font-size: 24px
+				.title__text
+					font-size: 18px
+			.inner
+				margin-bottom: 100px
+			.about
+				.about__pic
+					margin: 0 30px 30px 0 
+				.about__in
+					display: block
+			.mission
+				.mission__cell
+					display: block
+					&:first-child
+						width: auto
+			.quality
+				.quality__left
+					float: none
+					margin: 0 0 50px
+					text-align: center
+			.press
+				.press__item
+					margin-bottom: 50px
+				.press__info
+					left: 350px
 
 	&.no-desktop
 		.main, .slider, .partners, .footer
@@ -123,9 +213,6 @@ html
 			min-height: 900px
 		.slider, .partners
 			padding: 15px
-	&.ie8
-		min-width: 980px 
-		overflow: auto !important
 
 body
 	min-width: 320px
@@ -147,12 +234,12 @@ h1, h2, h3, h4, h5, h6
 .wrapper
 	min-height: 100%
 	margin-bottom: -300px
-	+m
+	+r(980)
 		margin-bottom: -250px
 
 .push
 	height: 300px
-	+m
+	+r(980)
 		height: 250px
 		
 .fullpage
@@ -169,7 +256,7 @@ h1, h2, h3, h4, h5, h6
 	max-width: 1700px
 	margin: 0 auto
 	padding: 0 30px
-	+p
+	+r(1366)
 		padding: 0 15px
 	&.l-center_small
 		max-width: 1360px
@@ -179,7 +266,7 @@ h1, h2, h3, h4, h5, h6
 	min-height: 55px
 	margin-bottom: 40px
 	z-index: 199 
-	+m
+	+r(980)
 		min-height: 0
 		margin-bottom: 20px
 	&.is-fixed
@@ -276,7 +363,7 @@ h1, h2, h3, h4, h5, h6
 		background: #101010 
 	.header__in
 		+clr
-		+m
+		+r(980)
 			position: relative
 	.header__logo
 		float: left
@@ -285,9 +372,9 @@ h1, h2, h3, h4, h5, h6
 		+s(logo-sticker)
 	.phone
 		margin: 100px 0 0 75px 
-		+p
+		+r(1366)
 			margin: 93px 0 0 10px
-		+m
+		+r(980)
 			top: 39px
 			margin: 0 
 	.nav-btn
@@ -297,7 +384,7 @@ h1, h2, h3, h4, h5, h6
 		padding-top: 20px
 		+header_fixed
 			display: block !important
-		+m
+		+r(980)
 			display: none
 			position: absolute
 			top: 0
@@ -308,7 +395,7 @@ h1, h2, h3, h4, h5, h6
 			background: #101010 
 			z-index: 2  
 		.nav__list
-			+m
+			+r(980)
 				float: none
 				width: 100%
 				padding: 0
@@ -319,7 +406,7 @@ h1, h2, h3, h4, h5, h6
 					a
 						position: relative
 						color: #656363 
-				+m
+				+r(980)
 					margin-left: 25px
 					padding: 5px 0 5px 10px
 					border-left: 1px solid $red
@@ -345,7 +432,7 @@ h1, h2, h3, h4, h5, h6
 		padding-top: 100px
 		z-index: 2
 		+vertical
-		+m
+		+r(980)
 			padding-top: 50px
 	.main__center-in
 		display: inline-block
@@ -363,9 +450,20 @@ h1, h2, h3, h4, h5, h6
 		font-size: 0
 		text-align: left
 		z-index: 2 
-		+p
+		+r(1366)
 			left: 15px
-		+m
+		+r(980)
+			position: relative
+			display: inline-block
+			left: auto
+			bottom: auto
+			width: auto
+			height: 220px
+			margin-right: 65px
+			vertical-align: top
+		+r(580)
+			margin-right: 40px
+		+r(460)	
 			display: none
 		img
 			max-width: 100%
@@ -378,19 +476,21 @@ h1, h2, h3, h4, h5, h6
 		text-align: right
 		font-size: 0
 		z-index: 4 
-		+p
+		+r(1366)
 			width: 80%
-		+m
+		+r(980)
 			float: none
-			width: 230px
+			display: inline-block
+			width: 234px
 			margin: 0 auto
+			vertical-align: top
 	.main__serv-item
 		display: inline-block
 		width: 31%
 		margin-left: 2%
 		background: #fff
 		vertical-align: top
-		+m
+		+r(980)
 			width: 100%
 			margin: 0 0 10px
 	.main__serv-pic
@@ -413,11 +513,13 @@ h1, h2, h3, h4, h5, h6
 		text-transform: uppercase
 		color: #333
 		+vertical
+		+r(980)
+			height: 50px
 		span
 			display: inline-block
 			vertical-align: middle
 			font-size: 18px
-			+p
+			+r(1366)
 				font-size: 16px
 	.l-center
 		max-width: 1520px
@@ -427,23 +529,37 @@ h1, h2, h3, h4, h5, h6
 				background: #101010 
 			.phone
 				margin: 10px 0 0 50px
-				+m
+				+r(980)
 					margin: 0
 			.nav
 				padding-top: 0
 		.header__wrap
 			background: none
+		.header__logo
+			display: none
+			+r(460)
+				display: block
+				margin-top: 10px
 		.phone
 			margin: 60px 0 0 0 
-			+m
+			+r(980)
 				margin: 0
+				right: auto
+				left: 25px
+			+r(460)
+				left: auto
+				right: 15px 
 		.nav
-			padding-top: 65px	
+			padding-top: 65px
+		.nav-btn
+			top: 40px	
+			+r(460)
+				top: 10px
 
 .phone
 	float: left
 	font-size: 0
-	+m
+	+r(980)
 		float: none
 		position: absolute
 		top: 61px
@@ -456,14 +572,14 @@ h1, h2, h3, h4, h5, h6
 		margin-right: 15px
 		font-size: 22px
 		color: #C5C5C5 
-		+p
+		+r(1366)
 			font-size: 20px
-		+m
+		+r(980)
 			margin-right: 15px
 			font-size: 18px
 	.phone__ico
 		+s(marker)
-		+m
+		+r(980)
 			+s(marker-s)
 
 .nav-line
@@ -474,7 +590,7 @@ h1, h2, h3, h4, h5, h6
 	height: 6px
 	background: $red 
 	+transition(width .4s, left .4s)
-	+m
+	+r(980)
 		display: none
 	
 .nav-btn
@@ -484,7 +600,7 @@ h1, h2, h3, h4, h5, h6
 	right: 15px
 	+s(menu-ico)
 	z-index: 4 
-	+m
+	+r(980)
 		display: block
 
 .nav
@@ -501,18 +617,18 @@ h1, h2, h3, h4, h5, h6
 		vertical-align: top 
 		&:nth-child(2)
 			width: 120px
-		+p
+		+r(1366)
 			width: 120px
 			&:first-child, &:last-child
 				width: auto
 			&:last-child
 				padding: 0 0 0 15px
-		+m
+		+r(980)
 			min-height: 0 
 		li
 			margin-top: 5px
 			line-height: 0.9
-			+m
+			+r(980)
 				margin: 0
 			&:first-child
 				margin: 0
@@ -524,7 +640,7 @@ h1, h2, h3, h4, h5, h6
 			width: 1px
 			height: 200px
 			background: #5f5f5f 
-			+m
+			+r(980)
 				display: none
 		&:first-child
 			&:after
@@ -540,7 +656,7 @@ h1, h2, h3, h4, h5, h6
 		margin-bottom: 5px
 		text-transform: uppercase
 		font-size: 20px
-		+p
+		+r(1366)
 			font-size: 18px
 
 .slider
@@ -557,28 +673,28 @@ h1, h2, h3, h4, h5, h6
 	.slider__nav
 		margin-bottom: 45px
 		text-align: center
-		+m
+		+r(980)
 			margin-bottom: 20px
 	.slider__nav-in
 		display: inline-block
 		padding: 0 15px 7px
 		border-bottom: 1px solid #a0a0a0 
 		font-size: 0
-		+m
+		+r(980)
 			padding: 0 0 8px
 		a
 			position: relative
 			display: inline-block
 			font-size: 18px
 			color: #9E9E9E 
-			+p
+			+r(1366)
 				font-size: 16px
-			+m
+			+r(980)
 				width: 40%
 				font-size: 14px
 			&:first-child
 				margin-right: 30px
-				+m
+				+r(980)
 					margin-right: 5px
 			&.is-active
 				color: #404040
@@ -596,24 +712,24 @@ h1, h2, h3, h4, h5, h6
 		position: relative
 		max-width: 1210px
 		margin: 0 auto
-		+p
+		+r(1366)
 			margin: 0 50px 
-		+m
+		+r(980)
 			margin: 0 15px
 	.slider__in
 		margin-bottom: 15px
 		padding-bottom: 60px
 		border-bottom: 2px solid #a0a0a0
 		text-align: left
-		+m	
+		+r(980)	
 			padding-bottom: 40px
 			margin-bottom: 10px 
 	.slider__about
 		font-size: 30px
 		text-align: center
-		+p
+		+r(1366)
 			font-size: 24px
-		+m
+		+r(980)
 			font-size: 16px
 	.slider__list
 		position: relative
@@ -623,19 +739,19 @@ h1, h2, h3, h4, h5, h6
 		margin-top: -78px
 		background: none
 		font-size: 0 
-		+m
+		+r(980)
 			display: none
 	.slider__prev
 		left: -100px
-		+r17
+		+r(1760)
 			left: -50px
-		+p
+		+r(1366)
 			left: -30px
 	.slider__next
 		right: -100px
-		+r17
+		+r(1760)
 			right: -50px
-		+p
+		+r(1366)
 			right: -30px
 	.slider__item
 		width: 100%
@@ -643,10 +759,11 @@ h1, h2, h3, h4, h5, h6
 		position: relative
 		width: 100%
 		height: 600px
-		+p
+		+r(1366)
 			height: 430px
-		+m
+		+r(980)
 			height: 400px
+		+r(580)
 	.slider__pic
 		position: absolute
 	.slider__pic-in
@@ -656,10 +773,10 @@ h1, h2, h3, h4, h5, h6
 		background: #FFF 
 		border: 2px solid $red 
 		+vertical
-		+p
+		+r(1366)
 			width: 172px
 			height: 172px
-		+m
+		+r(760)
 			width: 130px
 			height: 130px
 		&:after
@@ -673,11 +790,11 @@ h1, h2, h3, h4, h5, h6
 			border-radius: 50% 
 			border: 5px solid #404040
 			z-index: 2
-			+p
+			+r(1366)
 				width: 116px
 				height: 116px
 				margin: -63px 0 0 -63px
-			+m
+			+r(760)
 				width: 88px
 				height: 88px
 				margin: -49px 0 0 -49px
@@ -689,111 +806,137 @@ h1, h2, h3, h4, h5, h6
 		.slider__pic-in
 			width: 530px
 			height: 530px
-			+p
+			+r(1366)
 				width: 334px
 				height: 334px
-			+m
+			+r(760)
 				width: 250px
 				height: 250px
 			&:after
 				width: 360px
 				height: 360px
 				margin: -185px 0 0 -185px
-				+p
+				+r(1366)
 					width: 224px
 					height: 224px
 					margin: -117px 0 0 -117px 
-				+m
+				+r(760)
 					width: 170px
 					height: 170px
 					margin: -90px 0 0 -90px
 	.slider__text
 		position: absolute
 		font-size: 30px
-		+r12
-			font-size: 24px
-		+r11
+		+r(1180)
+			font-size: 26px
+		+r(1100)
+			font-size: 23px
+		+r(880)
 			font-size: 18px
-		+r8
-			font-size: 10px
+		+r(790)
+			font-size: 16px
+		+r(580)
+			font-size: 14px
 		span
 			display: inline-block
 			font-size: 120px 
 			vertical-align: top
 			line-height: 0.9
 			letter-spacing: -2px 
-			+r12
+			+r(1180)
 				font-size: 96px
-			+r11
-				font-size: 72px
-			+r8
-				font-size: 48px
+			+r(1100)
+				font-size: 70px
+			+r(880)
+				font-size: 60px
+			+r(790)
+				font-size: 50px
+			+r(580)
+				font-size: 46px 
 	.slider__text_1
 		top: 80px
 		left: 10px
-		+p
+		+r(1366)
 			top: 20px
 			left: 50px
-		+m
+		+r(980)
 			top: 30px
-			left: 50px
-		+r8
-			top: 0
 			left: 0
+		+r(580)
+			top: 0
 	.slider__text_2
 		bottom: 0
 		left: 350px
-		+p
+		+r(1366)
 			left: 270px
-		+m
+		+r(980)
 			left: 190px
-		+r8
+		+r(580)
 			left: 140px
 	.slider__text_3
 		top: 100px
 		right: 10px
-		+p
+		+r(1366)
 			top: 30px
-		+m
-			top: 100px
-			right: 100px
-		+r8
+		+r(980)
+			top: 40px
+			right: 0
+		+r(580)
 			top: 0
 			right: 0
+			left: auto
+		+r(470)
+			right: auto
+			left: 0
 	.slider__text_4
 		bottom: 0
 		right: 280px
-		+m
-			right: 240px
+		+r(1180)
+			right: 250px
+		+r(980)
+			right: 200px
+		+r(580)
+			right: 130px
+			left: 0
+			bottom: -10px
+		i
+			font-style: normal
+			+r(580)
+				display: inline-block
+				width: 70px
 	.slider__pic_1
 		top: 0
 		right: 0
-		+p
+		+r(1366)
 			right: 50px
-		+m
-			top: 65px
+		+r(980)
+			top: 30px
 			right: 0
+		+r(580)
+			top: 75px
 	.slider__pic_2
 		bottom: 0
 		left: 0
-		+p
+		+r(1366)
 			left: 50px
-		+m
+		+r(980)
 			left: 0
 	.slider__pic_3
 		top: 0
 		left: 0
-		+p
+		+r(1366)
 			left: 50px
-		+m
-			top: 55px
+		+r(980)
+			top: 30px
 			left: 0
+		+r(580)
+			top: 58px
 	.slider__pic_4
 		bottom: 0
 		right: 0
-		+p
+		+r(1366)
 			right: 50px
-		+m
+		+r(980)
 			right: 0
 
 .partners
@@ -803,7 +946,7 @@ h1, h2, h3, h4, h5, h6
 	right: 0
 	bottom: 300px
 	+vertical
-	+m
+	+r(980)
 		top: 0
 		bottom: 250px
 	.partners__in
@@ -818,11 +961,11 @@ h1, h2, h3, h4, h5, h6
 		font-size: 36px
 		line-height: 1
 		text-transform: uppercase
-		+p
+		+r(1366)
 			margin-bottom: 40px
 			padding-bottom: 10px
 			font-size: 26px
-		+m
+		+r(980)
 			font-size: 22px
 		&:after
 			content: ""
@@ -836,7 +979,7 @@ h1, h2, h3, h4, h5, h6
 	.partners__list
 		font-size: 0
 		border: 1px solid #a0a0a0
-		+m
+		+r(980)
 			border-width: 1px 0 0 1px
 		li
 			display: inline-block
@@ -847,20 +990,24 @@ h1, h2, h3, h4, h5, h6
 			box-sizing: border-box
 			vertical-align: top
 			+vertical
-			+p
+			+r(1366)
 				height: 104px
-			+m
-				width: 50%
-				height: 100px
+			+r(980)
+				width: 33.33%
 				border: 1px solid #a0a0a0 
 				border-width: 0 1px 1px 0
+			+r(760)
+				width: 50%
+				height: 100px
 			&:first-child
 				width: 17%
 				border: none
-				+m
-					width: 50%
+				+r(980)
+					width: 33.33%
 					border: 1px solid #a0a0a0 
 					border-width: 0 1px 1px 0
+				+r(760)
+					width: 50%
 			img
 				max-width: 100%
 				max-height: 100%
@@ -870,13 +1017,13 @@ h1, h2, h3, h4, h5, h6
 	position: relative
 	height: 300px
 	background: #101010 
-	+m
+	+r(980)
 		height: 250px
 	.footer__in
 		min-height: 185px
 		padding-top: 65px
 		+clr
-		+m
+		+r(980)
 			min-height: 174px
 			padding-top: 25px
 	.footer__left
@@ -901,7 +1048,7 @@ h1, h2, h3, h4, h5, h6
 		font-size: 18px
 		color: #B1B1B1 
 		span
-			+m
+			+r(980)
 				display: none
 	.footer__created
 		float: right
@@ -914,16 +1061,16 @@ h1, h2, h3, h4, h5, h6
 			margin-right: 15px
 			font-size: 18px
 			color: #B1B1B1 
-			+m
+			+r(980)
 				font-size: 12px 
 		a
 			+s(mediahero)
-		+m
+		+r(980)
 			position: absolute
 			bottom: 60px
 			left: 15px
 	.nav
-		+m
+		+r(980)
 			display: none
 
 .social
