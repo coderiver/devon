@@ -4,7 +4,7 @@
 	font-size: 0
 	+r(1366)
 		margin-bottom: 50px
-	+r(980)
+	+r(760)
 		margin-bottom: 25px
 	li
 		position: relative
@@ -12,7 +12,7 @@
 		padding-left: 20px
 		font-size: 16px
 		color: #262626 
-		+r(980)
+		+r(760)
 			font-size: 14px
 		&:before
 			content: ""
@@ -37,18 +37,18 @@
 		margin-bottom: 100px
 		+r(1366)
 			margin-bottom: 40px
-	+r(980)
+	+r(760)
 		margin: 0 auto 30px
 	.title__in
 		position: relative
-		padding-bottom: 15px
+		padding-bottom: 10px
 		border-bottom: 1px solid #A0A0A0 
 		text-align: center
 		font-size: 30px
 		line-height: 1.1
 		+r(1366)
 			font-size: 24px
-		+r(980)
+		+r(760)
 			padding-bottom: 10px
 			font-size: 18px
 		&:after
@@ -60,7 +60,7 @@
 			height: 3px
 			margin-left: -145px
 			background: $red 
-			+r(980)
+			+r(760)
 				width: 160px
 				margin-left: -80px
 	.title__text
@@ -70,11 +70,36 @@
 		font-size: 20px
 		+r(1366)
 			font-size: 18px
-		+r(980)
+		+r(760)
 			font-size: 16px
 			text-align: left
 		p
 			margin-bottom: 20px
+
+.title-simple
+	position: relative
+	margin-bottom: 30px 
+	font-size: 30px
+	text-align: center
+	+r(1366)
+		font-size: 24px
+	+r(980)
+		padding-bottom: 10px
+		border-bottom: 1px solid #A0A0A0 
+		&:after
+			content: ""
+			position: absolute
+			bottom: -2px
+			left: 50%
+			width: 290px
+			height: 3px
+			margin-left: -145px
+			background: $red 
+			+r(760)
+				width: 160px
+				margin-left: -80px
+	+r(760)
+		font-size: 18px
 			
 .dev
 	position: relative
@@ -240,7 +265,7 @@
 				min-height: 95px
 				padding-top: 20px
 				margin-bottom: 10px
-				font-size: 16px
+				font-size: 18px
 			&:before
 				content: ""
 				position: absolute
@@ -474,6 +499,8 @@
 				right: -100%
 		.logist__type
 			text-align: right
+		.logist__type-in
+			float: right
 		.logist__more
 			i
 				+s(logist-arr-right)
@@ -488,6 +515,8 @@
 			+tr(left .4s)
 			&.is-moved
 				left: -100%
+		.logist__type-in
+			float: left
 		.logist__more
 			i
 				+s(logist-arr-left)
@@ -510,13 +539,24 @@
 		left: 25px
 		right: 25px
 		color: #fff
+		+r(980)
+			top: 25px
+			right: 15px
+			left: 15px
 	.logist__type-in
-		margin-bottom: 50px
+		max-width: 75%
+		min-height: 75px
 		font-size: 24px
 		text-transform: uppercase
 		+r(1366)
 			font-size: 20px
+		+r(760)
+			min-height: 50px
+			font-size: 18px
+		+r(660)
+			font-size: 16px
 	.logist__more
+		clear: both
 		font-size: 0
 		span, i
 			display: inline-block
@@ -1004,10 +1044,13 @@
 			+r(980)
 				width: 94px
 				height: 82px
+				margin: 0 0 1px 0
+			+r(600)
 				margin: 0 1px 0 0
 			+r(460)
 				width: 69px
 				height: 62px
+				
 			&.is-active
 				border-color: $red
 				img
@@ -1038,28 +1081,6 @@
 			+r(980)
 				max-width: 100%
 				margin-left: 0 
-
-.title-simple
-	position: relative
-	margin-bottom: 30px 
-	font-size: 30px
-	text-align: center
-	+r(980)
-		padding-bottom: 10px
-		border-bottom: 1px solid #A0A0A0 
-		font-size: 22px
-		&:after
-			content: ""
-			position: absolute
-			bottom: -2px
-			left: 50%
-			width: 290px
-			height: 3px
-			margin-left: -145px
-			background: $red 
-			+r(980)
-				width: 160px
-				margin-left: -80px
 
 .inner
 	margin-bottom: 150px
@@ -1150,6 +1171,7 @@
 		vertical-align: top
 		+r(1366)
 			display: block
+			padding: 0 0 20px 
 		&:first-child
 			width: 400px
 			+r(1366)
@@ -1194,17 +1216,34 @@
 		text-transform: uppercase
 	.goal__list
 		font-size: 0
+		white-space: nowrap
 		+r(980)
 			text-align: center
 		li
+			position: relative
 			display: inline-block
-			+s(goal-item)
+			width: 33%
+			max-width: 195px
 			text-align: center
-			line-height: 57px
 			font-size: 18px 
 			vertical-align: top
+			overflow: hidden
 			+r(980)
 				margin-bottom: 10px
+			+r(640)
+				font-size: 16px
+			+r(560)
+				display: none
+			img
+				max-width: 100%
+			span
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 180px
+				height: 22px
+				margin: -12px 0 0 -90px
+				line-height: 22px
 	.goal__pic
 		display: inline-block
 		font-size: 0
@@ -1222,7 +1261,7 @@
 			float: none
 			margin: 0 0 50px
 			text-align: center
-		+r(700)
+		+r(570)
 			display: none
 	>.quality__list,
 	.quality__center
@@ -1252,6 +1291,12 @@
 		text-align: center
 	.quality__pic
 		margin: 15px 0
+		img
+			max-width: 100%
+		+r(720)
+			width: 300px
+		+r(660)
+			width: 220px
 	.quality__right
 		display: table
 
@@ -1283,14 +1328,14 @@
 		+r(700)
 			position: relative
 			left: 0
-		&:after
-			content: ""
-			position: absolute
-			left: 0
-			right: 0
-			bottom: 0
-			height: 10px
-			+g(rgba(255,255,255,0), rgba(255,255,255,1))
+		//&:after
+		//	content: ""
+		//	position: absolute
+		//	left: 0
+		//	right: 0
+		//	bottom: 0
+		//	height: 10px
+		//	+g(rgba(255,255,255,0), rgba(255,255,255,1))
 	.press__head
 		margin-bottom: 5px
 		+clr
@@ -1327,6 +1372,8 @@
 		+r(980)
 			float: none
 			margin: 0 0 10px 
+		+r(460)
+			display: none
 	.career__info
 		display: table
 	.career__links
@@ -1377,6 +1424,8 @@
 		+r(980)
 			float: none
 			margin: 0 0 10px 
+		+r(460)
+			display: none
 	.vacancy__list
 		float: left
 		width: 380px

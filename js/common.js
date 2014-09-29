@@ -56,7 +56,7 @@ head.ready(function() {
 		var nav_btn = $('.nav-btn'),
 				nav = $('.js-nav');
 		nav_btn.on('click', function () {
-			nav.fadeToggle();
+			nav.toggle();
 		});
 	}
 	nav_btn();
