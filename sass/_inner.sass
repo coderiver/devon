@@ -17,8 +17,9 @@
 		&:before
 			content: ""
 			position: absolute
-			top: 6px
+			top: 50%
 			left: 8px
+			margin-top: -3px
 			+s(bc-arr)
 		&:first-child
 			padding: 0
@@ -549,10 +550,11 @@
 		font-size: 24px
 		text-transform: uppercase
 		+r(1366)
-			font-size: 20px
+			font-size: 23px
+		+r(1020)
+			font-size: 17px
 		+r(760)
 			min-height: 50px
-			font-size: 18px
 		+r(660)
 			font-size: 16px
 	.logist__more
@@ -830,6 +832,8 @@
 		top: 0
 		+r(1760)
 			right: 130px
+		+r(980)
+			right: 145px
 	.sl__item
 		position: absolute
 		right: 0
@@ -857,6 +861,7 @@
 			min-height: 0
 			font-size: 14px
 		+r(980)
+			width: 125px
 			padding-left: 10px
 		li
 			margin-bottom: 3px

@@ -10,8 +10,14 @@ head.ready(function() {
 					else {
 						var header = $('.js-header');
 						header.addClass('is-fixed');
+						setTimeout(function () {
+							header.addClass('is-visible');
+						}, 100);
 						if(nextIndex == '1') {
 							header.removeClass('is-fixed');
+							setTimeout(function () {
+								header.removeClass('is-visible');
+							}, 1000);
 						};
 						nav();
 					}
@@ -56,7 +62,20 @@ head.ready(function() {
 		var nav_btn = $('.nav-btn'),
 				nav = $('.js-nav');
 		nav_btn.on('click', function () {
-			nav.toggle();
+			if (!$(this).hasClass('is-open')) {
+				nav_btn.addClass('is-open');
+				nav.show();
+				setTimeout(function () {
+					nav.addClass('is-open');
+				}, 1);
+			}
+			else {
+				nav_btn.removeClass('is-open');
+				nav.removeClass('is-open');
+				setTimeout(function () {
+					nav.hide();
+				}, 300);
+			}
 		});
 	}
 	nav_btn();
@@ -184,9 +203,12 @@ head.ready(function() {
 		if (!body.hasClass('main-page')) {
 			if (scroll_top > 0) {
 				header.addClass('is-fixed');
+				setTimeout(function () {
+					header.addClass('is-visible');
+				}, 100);
 			}
 			else {
-				header.removeClass('is-fixed');
+				header.removeClass('is-fixed is-visible');
 			}
 			nav();
 		};

@@ -277,10 +277,9 @@ h1, h2, h3, h4, h5, h6
 				left: 0 
 				width: 100%
 				height: 55px
-				+gpu
-			.header__wrap-inz
-				position: relative
-				z-index: 4 
+				visibility: hidden
+				opacity: 0
+				+transform(translateY(20px)) 
 			.header__logo-big
 				display: none
 			.header__logo-sticker
@@ -359,6 +358,13 @@ h1, h2, h3, h4, h5, h6
 						+s(nav-dropdown)
 			.phone
 				margin: 10px 0 0 50px
+	&.is-visible
+		+header_fixed
+			.header__wrap
+				visibility: visible
+				opacity: 1
+				+transform(translateY(0px)) 
+				+tr(all .2s)
 	.header__wrap
 		background: #101010 
 	.header__in
@@ -394,7 +400,11 @@ h1, h2, h3, h4, h5, h6
 			margin: 0
 			padding: 20px 15px 50px 20px
 			background: #101010 
+			+transform(translateX(245px))
+			+tr(transform .3s)
 			z-index: 2  
+			&.is-open
+				+transform(translateX(0))
 		.nav__list
 			+r(980)
 				float: none
@@ -406,7 +416,7 @@ h1, h2, h3, h4, h5, h6
 				&.is-active
 					a
 						position: relative
-						color: #656363 
+						color: #9E9E9E 
 				+r(980)
 					margin-left: 25px
 					padding: 5px 0 5px 10px
@@ -522,6 +532,8 @@ h1, h2, h3, h4, h5, h6
 			font-size: 18px
 			+r(1366)
 				font-size: 16px
+			+r(980)
+				font-size: 14px
 	.l-center
 		max-width: 1520px
 	.header
@@ -734,7 +746,11 @@ h1, h2, h3, h4, h5, h6
 		+r(1366)
 			font-size: 24px
 		+r(980)
-			font-size: 16px
+			font-size: 23px
+		+r(760)
+			font-size: 18px
+		+r(480)
+			font-size: 14px
 	.slider__list
 		position: relative
 	.slider__prev, .slider__next
@@ -743,23 +759,19 @@ h1, h2, h3, h4, h5, h6
 		margin-top: -78px
 		background: none
 		font-size: 0 
-		+r(760)
+		+r(920)
 			display: none
 	.slider__prev
 		left: -100px
 		+r(1760)
 			left: -70px
 		+r(1366)
-			left: -60px
-		+r(880)
 			left: -45px
 	.slider__next
 		right: -100px
 		+r(1760)
 			right: -70px
 		+r(1366)
-			right: -60px
-		+r(880)
 			right: -45px
 	.slider__item
 		width: 100%
