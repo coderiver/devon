@@ -241,8 +241,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 @media only screen and (max-width: 980px) { .slider .slider__in { padding-bottom: 40px; margin-bottom: 10px; } }
 .slider .slider__about { font-size: 30px; text-align: center; }
 @media only screen and (max-width: 1366px) { .slider .slider__about { font-size: 24px; } }
-@media only screen and (max-width: 980px) { .slider .slider__about { font-size: 23px; } }
-@media only screen and (max-width: 760px) { .slider .slider__about { font-size: 18px; } }
+@media only screen and (max-width: 980px) { .slider .slider__about { font-size: 18px; } }
 @media only screen and (max-width: 480px) { .slider .slider__about { font-size: 14px; } }
 .slider .slider__list { position: relative; }
 .slider .slider__prev, .slider .slider__next { position: absolute; top: 50%; margin-top: -78px; background: none; font-size: 0; }
