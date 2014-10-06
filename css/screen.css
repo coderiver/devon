@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 400; }
   .header.is-fixed .nav__list-title.is-dropdown { padding-right: 15px; }
   .header.is-fixed .nav__list-title.is-dropdown:after { content: ""; position: absolute; top: 50%; right: 0; margin-top: -2px; background: url('../img/icons-sbf532d3780.png') 0 -1163px no-repeat; width: 9px; height: 5px; }
   .header.is-fixed .phone { margin: 10px 0 0 50px; } }
-@media only screen and (min-width: 980px) { .header.is-visible .header__wrap { visibility: visible; opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); -ms-transform: translateY(0px); -o-transform: translateY(0px); transform: translateY(0px); -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; } }
+@media only screen and (min-width: 980px) { .header.is-visible .header__wrap { visibility: visible; opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); -ms-transform: translateY(0px); -o-transform: translateY(0px); transform: translateY(0px); -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -o-transition: all 0.4s; transition: all 0.4s; } }
 .header .header__wrap { background: #101010; }
 .header .header__in { *zoom: 1; }
 .header .header__in:after { content: " "; display: table; clear: both; }
